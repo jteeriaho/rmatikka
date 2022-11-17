@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilastollinen virheenarviointi &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Regressioanalyysi" href="tilasto2b.html" />
+    <link rel="prev" title="Todennäköisyysjakaumat" href="tilasto1b.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tilasto2a.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jteeriaho/rmatikka.git/main?urlpath=tree/tilasto2a.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otannalla-saadun-tuloksen-virhemarginaali">
+   Otannalla saadun tuloksen virhemarginaali
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otantavirheet">
+     Otantavirheet
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#esimerkki-otantavirheista">
+       Esimerkki otantavirheistä
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mittaussarjan-keskiarvon-keskivirhe">
+     Mittaussarjan keskiarvon keskivirhe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excel-funktio-luottamusvali-t-engl-confidence-t">
+     Excel -funktio LUOTTAMUSVÄLI.T (engl. CONFIDENCE.T)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suhteellisen-osuuden-luottamusvali">
+     Suhteellisen osuuden luottamusväli
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ratkaistuja-esimerkkeja">
+     Ratkaistuja esimerkkejä
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tilastollinen virheenarviointi</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otannalla-saadun-tuloksen-virhemarginaali">
+   Otannalla saadun tuloksen virhemarginaali
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otantavirheet">
+     Otantavirheet
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#esimerkki-otantavirheista">
+       Esimerkki otantavirheistä
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mittaussarjan-keskiarvon-keskivirhe">
+     Mittaussarjan keskiarvon keskivirhe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excel-funktio-luottamusvali-t-engl-confidence-t">
+     Excel -funktio LUOTTAMUSVÄLI.T (engl. CONFIDENCE.T)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suhteellisen-osuuden-luottamusvali">
+     Suhteellisen osuuden luottamusväli
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ratkaistuja-esimerkkeja">
+     Ratkaistuja esimerkkejä
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tilastollinen-virheenarviointi">
+<h1>Tilastollinen virheenarviointi<a class="headerlink" href="#tilastollinen-virheenarviointi" title="Permalink to this headline">¶</a></h1>
+<p>Mittausvirheet voidaan jakaa kahteen tyyppiin:</p>
+<p>Tyyppi A: virheet, jotka johtuvat satunnaisista tekijöistä<br />
+Tyyppi B: virheet, jotka vaikuttavat määrättyyn suuntaan (esim. mittarin kalibrointivirheet)</p>
+<p><img alt="virhelajit" src="_images/kuva55.PNG" /></p>
+<p>Satunnaisvirheen vaikutus tulokseen voidaan eliminoida toistamalla mittausta, jolloin mittaustulosten keskiarvo lähestyy suureen todellista arvoa. Systemaattisen virheen vaikutusta ei voi eliminoida toistolla.</p>
+<div class="section" id="otannalla-saadun-tuloksen-virhemarginaali">
+<h2>Otannalla saadun tuloksen virhemarginaali<a class="headerlink" href="#otannalla-saadun-tuloksen-virhemarginaali" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="otantavirheet">
+<h3>Otantavirheet<a class="headerlink" href="#otantavirheet" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Otantavirhe</p>
+<p><strong>Otantavirhe on otosten poiminnan satunnaisuudesta aiheutuva virhelähde.</strong></p>
+</div>
+<div class="section" id="esimerkki-otantavirheista">
+<h4>Esimerkki otantavirheistä<a class="headerlink" href="#esimerkki-otantavirheista" title="Permalink to this headline">¶</a></h4>
+<p>Oletetaan, että miespuolisten varusmiesten pituus noudattaa Gaussin normaalijakaumaa, jonka keskiarvo on 180 cm ja keskihajonta 8 cm.</p>
+<p>Tutkittaessa varusmiesten pituuksia käyttämällä 25 henkilön otoksia, otosten pituusjakaumat poikkeavat toisistaan johtuen otantavirheestä.<br />
+Kuvassa on kolmen otoksen jakaumat.</p>
+<p><img alt="otantavirhe" src="_images/kuva56.PNG" /></p>
+<p>Huolimatta eroavaisuuksista, otoskeskiarvot 180.3 cm, 180.7 cm ja 181.3 cm ovat lähellä toisiaan.</p>
+<p>Voidaan todistaa, että kun otoskokoa kasvatetaan, otoskeskiarvo lähestyy populaatiokeskiarvoa (tässä esimerkissä siis 180 cm).</p>
+<p>Lisäksi otoskeskiarvot ovat normaalisti jakautuneet.</p>
+<blockquote>
+<div><p>Otoskeskiarvojen keskihajonta on <span class="math notranslate nohighlight">\(\frac{s}{\sqrt{n}}\)</span> ,missä s on populaation keskihajonta ja n on otoskoko.</p>
+<p>Otoskokoa (= mittauksen toistojen lukumäärää) kasvattamalla saadaan otantavirhe pienentymään halutulle tasolle.</p>
+</div></blockquote>
+<p><img alt="otosvirhe" src="_images/kuva57.PNG" /></p>
+</div>
+</div>
+<div class="section" id="mittaussarjan-keskiarvon-keskivirhe">
+<h3>Mittaussarjan keskiarvon keskivirhe<a class="headerlink" href="#mittaussarjan-keskiarvon-keskivirhe" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Otoskeskiarvon keskivirhe</strong></p>
+<p>Olkoon X tilastomuuttuja, jonka arvoista otetaan n:n kappaleen otos.Tällöin</p>
+<ol class="simple">
+<li><p>Paras arvio muuttujan X keskiarvoksi on otoskeskiarvo</p></li>
+<li><p>Otoskeskiarvojen keskihajonta eli keskivirhe on <span class="math notranslate nohighlight">\(\frac{s}{\sqrt{n}}\)</span>,
+missä n on otoskoko ja s on muuttujan X keskihajonta<br />
+(jos X:n keskihajonta ei tunneta, käytetään otoksen keskihajontaa)</p></li>
+<li><p>Muuttujan X  keskiarvon virhemarginaali riippuu vaaditusta luottamustasosta, joka määritellään todennäköisyytenä, että oikea keskiarvo on virhemarginaalin sisäpuolella.</p></li>
+</ol>
+<p>X:n virhemarginaali <span class="math notranslate nohighlight">\(\Delta X = t \frac{s}{\sqrt{n}}\)</span>  , missä
+t = otoskoosta ja luottamustasosta riippuva <strong>kattavuuskerroin</strong></p>
+<blockquote>
+<div><p>Suurilla otoskoon arvoilla ( n &gt; 50) 95% luottamustasoa vastaa t = 1.96, ja<br />
+99% luottamustasoa vastaa t = 2.58    (perustuvat normaalijakauman kertymäfunktioon)</p>
+<p><strong>Merkitsevyystaso.</strong> Luottamustason sijasta esim. Excel-funktioissa käyttää sen komplementtia, jota sanotaan <em>merkitsevyystasoksi</em>.<br />
+Ts.  95% luottamustaso vastaa 5% merkitsevyystasoa, 99% luottamustasoa vastaa 1% merkitsevyystaso</p>
+</div></blockquote>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Numeerisen muuttujan mittaussarjan virhemarginaali</strong></p>
+<p><span class="math notranslate nohighlight">\(\Delta X = t \frac{s}{\sqrt{n}}\)</span>  , missä
+t = kattavuuskerroin, s = populaatiokeskihajonta (tai otoskeskihajonta, jos em. ei tiedossa), n = otoskoko</p>
+<p>Kattavuuskerroin t riippuu otoskoosta ja luottamustasosta (yleensä joko 95% tai 99%).<br />
+Ilman laskinta tai Exceliä kattavuuskertoimet eri otoskoille löytyvät taulukkokirjoista tai netistä. Alla taulukko kattavuuskertoimista eri suuruisille otoksille.</p>
+</div>
+<p><strong>Kattavuuskertoimia</strong> t tavallisimmille merkitsevyystasoille, n - 1 =  otoskoko - 1</p>
+<p><img alt="ttaulu" src="_images/kuva58.PNG" /></p>
+<blockquote>
+<div><p>Taulukon sijasta virhemarginaali voidaan laskea Excel- funktiolla LUOTTAMUSVÄLI.T.</p>
+</div></blockquote>
+</div>
+<div class="section" id="excel-funktio-luottamusvali-t-engl-confidence-t">
+<h3>Excel -funktio LUOTTAMUSVÄLI.T (engl. CONFIDENCE.T)<a class="headerlink" href="#excel-funktio-luottamusvali-t-engl-confidence-t" title="Permalink to this headline">¶</a></h3>
+<p>Pienillä otoksilla (n &lt; 50) otoskeskiarvojen jakauma noudattaa ns. Studentin T -jakaumaa, joka lähestyy suuremmilla otoksilla normaalijakaumaa.</p>
+<p>Excel -funktio <strong>LUOTTAMUSVÄLI.T(merkitsevyystaso; keskihajonta; otoskoko)</strong> laskee virhemarginaalin otoksesta saadulle muuttujan X keskiarvolle käyttäen kaavaa <span class="math notranslate nohighlight">\(\Delta X = t \frac{s}{\sqrt{n}}\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Asfaltin tiheys määritettiin kymmenestä näytteestä, joiden tiheydet olivat 2468, 2431, 2569, 2518, 2667, 2608, 2494, 2334, 2629ja 2570.  Otoskeskiarvo ja -keskihajonta ovat <span class="math notranslate nohighlight">\(2529 g/cm^3\)</span> ja <span class="math notranslate nohighlight">\(101 g/cm^3\)</span>. Mikä on mittaussarjan perusteella asfaltin tiheys? </p>
+<ol class="simple">
+<li><p>Asfaltin tiheydeksi annetaan otoskeskiarvo eli 2529</p></li>
+<li><p>Tiheyden absoluuttinen virhe 95% merkitsevyystasolla saadaan Excel funktiolla<br />
+<strong>= LUOTTAMUSVÄLI.T(5%;101;10)</strong>, joka antaa virheeksi <strong>72.2</strong></p></li>
+</ol>
+<p>(Ilman Exceliä tulos saadaan kaavalla <span class="math notranslate nohighlight">\(\Delta X = t \frac{s}{\sqrt{n}} = 2.262\frac{101}{\sqrt{10}}= 72.2\)</span>.<br />
+Kattavuuskerroin 2.262 löytyy yo. taulukosta riviltä n - 1 = 10 - 1 = 9)</p>
+</div>
+</div>
+<div class="section" id="suhteellisen-osuuden-luottamusvali">
+<h3>Suhteellisen osuuden luottamusväli<a class="headerlink" href="#suhteellisen-osuuden-luottamusvali" title="Permalink to this headline">¶</a></h3>
+<p>Gallup - tutkimuksissa tutkittava muuttujana on jonkin ehdokkaan tai ajatuksen kannatusprosentti, ts. <strong>suhteellinen osuus</strong>.   Otoskoot Gallup tutkimuksissa ovat suuria, yleensä 500 - 2500. Satunnaistettujen otosten tulokset noudattavat ns. binomijakaumaa.</p>
+<p>Suhteellisen osuuden virhemarginaali riippuu otoskoosta n ja ehdokkaan kannatuksesta p seuraavasti:</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Suhteellisen osuuden virhemarginaali</strong></p>
+<p><span class="math notranslate nohighlight">\(\Delta p = t \sqrt\frac{p(1-p)}{n}\)</span></p>
+<p>n = otoskoko, p = kannatusprosentti desimaalilukuna (esim. 0.35 vastaa 35% kannatusta),
+kattavuuskerroin t = 1.96 (95% luottamustaso) tai t = 2.34 (99% luottamustasolla)</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Sähköauton hankintaa harkitsi 38.4 % kyselyyn osallistuneista. Otoskoko oli 1000 henkeä. Mikä oli kyselyn virhemarginaali? </p>
+<p><span class="math notranslate nohighlight">\(\Delta p = t \sqrt\frac{p(1-p)}{n} = 1.96 \sqrt\frac{0.384(1-0.384)}{1000} = 0.030 = 3.0\%\)</span></p>
+<p>Vastaus: virhemarginaali on <span class="math notranslate nohighlight">\(\pm 3.0\)</span> prosenttiyksikköä</p>
+</div>
+<p>Jos asetetaan Gallup- tutkimukselle etukäteen vaatimus tietystä virhemarginaalista, voidaan tarvittava otoskoko n ratkaista em. yhtälöstä seuraavassa muodossa:</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Otoskoon määrittäminen, kun virhemarginaali on annettu</strong></p>
+<p>Otoskoko <span class="math notranslate nohighlight">\(n=\frac{p(1-p)t^2}{\Delta p^2}\)</span></p>
+<p>p = kannatusprosentti desimaalilukuna, t = kattavuuskerroin, <span class="math notranslate nohighlight">\(\Delta p\)</span> = virhemarginaali</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Presidenttigallupissa eniten kannatusta omaavan ehdokkaan on 23 % luokkaa. Kuinka suuri otoskoko tarvitaan seuraavassa gallupissa, jotta ehdokkaan kannatusmittauksessa päästäisiin 2 % virhemarginaaliin?   </p>
+<p>Otoskoko <span class="math notranslate nohighlight">\(n=\frac{0.23(1-1.023)1.96^2}{0.02^2} = 1701\)</span></p>
+<p>Vastaus: Otoskoon on oltava n. 1700</p>
+</div>
+<p>Huom!  Otoskoko riippuu kannatusprosentista siten, että suurin otoskoko tarvitaan n. 50 % kannatusta mitattaessa tiettyyn virhemarginaaliin pääsemiseksi.</p>
+</div>
+<div class="section" id="ratkaistuja-esimerkkeja">
+<h3>Ratkaistuja esimerkkejä<a class="headerlink" href="#ratkaistuja-esimerkkeja" title="Permalink to this headline">¶</a></h3>
+<div class="dropdown admonition">
+<p class="admonition-title">Tavaratalon asiakkaiden keski-ikää selvitettiin kysymällä ikä 200 satunnaisesti valitulta asiakkaalta.  Otoskeskiarvo oli 41.3 v  ja keskihajonta 23.5 v. Ilmoita tutkimuksen perusteella asiakkaiden keski-ikä ja sen virhemarginaali (95% luottamustasolla) </p>
+<p>Keski-iäksi annetaan otoskeskiarvo 41.3</p>
+<p>Virhemarginaali saadaan Excel-kaavalla<br />
+<strong>=LUOTTAMUSVÄLI.T(5% ; 23,5 ; 200)</strong> antaa tuloksen 3.3</p>
+<p>Vastaus: Keski-ikä on <span class="math notranslate nohighlight">\((41.3 \pm 3.3)\)</span> vuotta</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">500 satunnaisesti valitulta suomalaiselta kysyttiin, käyttävätkö he pankkikortin lähimaksuominaisuutta kaupan kassalla. Kyllä – vastauksia oli  47.5 %. Ilmoita tämän perusteella lähimaksua käyttäjien prosenttiosuus Suomessa virherajoineen. </p>
+<p><span class="math notranslate nohighlight">\(\Delta p = t \sqrt\frac{p(1-p)}{n} = 1.96 \sqrt\frac{0.475(1-0.475)}{500} = 0.044 = 4.4\%\)</span></p>
+<p>Vastaus: Lähimaksua kannattaa <span class="math notranslate nohighlight">\((47.5 \pm 4.4)\%\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tilasto1b.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Todennäköisyysjakaumat</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tilasto2b.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Regressioanalyysi</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derivoimiskaavoja &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Osittaisderivaatat" href="dkaavat2.html" />
+    <link rel="prev" title="Derivaatta" href="derivaatta.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/dkaavat1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jteeriaho/rmatikka.git/main?urlpath=tree/dkaavat1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenssifunktion-derivaatta">
+   Potenssifunktion derivaatta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juurilausekkeiden-derivointi">
+   Juurilausekkeiden derivointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polynomin-derivointi">
+   Polynomin derivointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erikoisfunktioiden-derivoimiskaavoja">
+   Erikoisfunktioiden derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivointi-wolframalpha-laskimella">
+   Derivointi WolframAlpha laskimella
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tulon-ja-osamaaran-derivoimiskaavat">
+   Tulon ja osamäärän derivoimiskaavat
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhdistetyn-funktion-derivaatta">
+   Yhdistetyn funktion derivaatta
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Derivoimiskaavoja</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenssifunktion-derivaatta">
+   Potenssifunktion derivaatta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#juurilausekkeiden-derivointi">
+   Juurilausekkeiden derivointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polynomin-derivointi">
+   Polynomin derivointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erikoisfunktioiden-derivoimiskaavoja">
+   Erikoisfunktioiden derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivointi-wolframalpha-laskimella">
+   Derivointi WolframAlpha laskimella
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tulon-ja-osamaaran-derivoimiskaavat">
+   Tulon ja osamäärän derivoimiskaavat
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhdistetyn-funktion-derivaatta">
+   Yhdistetyn funktion derivaatta
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="derivoimiskaavoja">
+<h1>Derivoimiskaavoja<a class="headerlink" href="#derivoimiskaavoja" title="Permalink to this headline">¶</a></h1>
+<p>Derivaattafunktion määrittämisen eli <strong>derivoinnin</strong> perinteinen menetelmä on derivoimiskaavojen käyttäminen. Derivoimiskaavoja löytyy matematiikan taulukkokirjoista. Derivoimiskaavat on johdettu derivaatan raja-arvomääritelmää käyttäen. Osa kaavoista on ilmeisiä.</p>
+<p>Nykyisin derivaatan laskeminen on vielä helpompaa, koska se voidaan tehdä algebralaskimilla.</p>
+<div class="section" id="potenssifunktion-derivaatta">
+<h2>Potenssifunktion derivaatta<a class="headerlink" href="#potenssifunktion-derivaatta" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Vakiofunktion ja potenssifunktion derivaatta</strong></p>
+<p>Seuraavissa kaavoissa käytetään derivaatasta merkintää Df(x)</p>
+<ol class="simple">
+<li><p>D(c) = 0                 (vakiofunktion f(x) = c derivaatta = 0)</p></li>
+<li><p><span class="math notranslate nohighlight">\(Dx^n = n x^{n-1}\)</span>     (potenssifunktion derivaatta)</p></li>
+<li><p>D(x) = 1</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\frac {1}{x^n}\)</span> =  <span class="math notranslate nohighlight">\(- \frac {n}{x^{n+1}}\)</span></p></li>
+</ol>
+</div>
+<p>Kaavojen perusteluja:</p>
+<ol class="simple">
+<li><p>Vakiofunktion f(x) = c kuvaaja on vaakasuora viiva, jonka kulmakerroin = 0</p></li>
+<li><p>Jaollisuusopin kaavan mukaan derivaatan määritelmän mukainen erotusosamäärä sievenee muotoon<br />
+<span class="math notranslate nohighlight">\(f'(x_0)=\underset{x\to x_0}{lim}\frac{x^n-x_0^n}{x-x_0}= \underset{x\to x_0}{lim}(x^{n-1}+x^{n-2}x_0+x^{n-3}x_0^2+...+x_0^{n-1})\)</span><br />
+<span class="math notranslate nohighlight">\(\hspace{36mm}= x_0^{n-1}+x_0^{n-1}x_0+... + x_0^{n-1} = nx_0^{n-1}\)</span></p></li>
+<li><p>Suoran f(x) = x  kulmakerroin eli derivaatta on 1. Kaavan voi myös johtaa sijoittamalla n=1 kaavaan (2), jolloin saadaan <span class="math notranslate nohighlight">\(Dx^1 = 1\cdot x^0 = 1\)</span></p></li>
+<li><p>Kaavaa (2) voidaan soveltaa myös, kun potenssi n on negatiivinen.  Tällöin <span class="math notranslate nohighlight">\(D\frac {1}{x^n} = Dx^{-n}=-n x^{-n-1} = -\frac {n}{x^{n+1}}\)</span></p></li>
+</ol>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske funktion <span class="math notranslate nohighlight">\(f(x) = x^5\)</span> a) derivaattafunktio, b) tangentin kulmakerroin kohdassa x=2, c) tangentin kulmakerroin kohdassa x = -1.</p>
+<p>a) <span class="math notranslate nohighlight">\(f'(x) = Dx^5 = 5 x^4\)</span><br />
+b) <span class="math notranslate nohighlight">\(f'(2) = 5*2^4 = 80\)</span><br />
+c) <span class="math notranslate nohighlight">\(f'(-1) = 5*(-1)^4 = 5\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi a) <span class="math notranslate nohighlight">\(x^{2015}\)</span>, b) <span class="math notranslate nohighlight">\(\frac {1}{x}\)</span> c) <span class="math notranslate nohighlight">\(\frac {1}{x^5}\)</span></p>
+<p>a) <span class="math notranslate nohighlight">\(Dx^{2015} = 2015 x^{2014}\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(D\frac {1}{x} = -\frac {1}{x^{1+1}}=-\frac {1}{x^2} \)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(D\frac {1}{x^5} = -\frac {5}{x^{5+1}}=-\frac {5}{x^6} \)</span></p>
+</div>
+</div>
+<div class="section" id="juurilausekkeiden-derivointi">
+<h2>Juurilausekkeiden derivointi<a class="headerlink" href="#juurilausekkeiden-derivointi" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Potenssin derivoimiskaavan sovellus murtopotensseihin</strong></p>
+<p>Juurilausekkeet voidaan esittää myös potenssimuodossa käyttäen murtopotensseja:<br />
+<span class="math notranslate nohighlight">\(\sqrt{x}=x^{\frac {1}{2}}\)</span> , <span class="math notranslate nohighlight">\(\sqrt[3]{x} =x^\frac{1}{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{x}}=x^{-\frac{1}{2}}\)</span></p>
+<p>Juurilausekkeiden derivaatat voidaan laskea potenssin derivoimissäännöllä. Esim.</p>
+<p><span class="math notranslate nohighlight">\(D\sqrt{x}= Dx^{\frac {1}{2}}=\frac {1}{2}x^{-\frac {1}{2}}= \frac{1}{2\sqrt{x}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(D\sqrt[3]{x}= Dx^{\frac {1}{3}}=\frac {1}{3}x^{-\frac {2}{3}}= \frac{1}{3\sqrt[3]{x^2}}\)</span></p>
+</div>
+</div>
+<div class="section" id="polynomin-derivointi">
+<h2>Polynomin derivointi<a class="headerlink" href="#polynomin-derivointi" title="Permalink to this headline">¶</a></h2>
+<p>Polynomien derivointiin tarvitaan potenssifunktion derivoimissäännön lisäksi kaksi muuta sääntöä, joiden mukaan derivointi on lineaarinen operaatio: ts. vakion voi siirtää derivaattaoperaattorin eteen ja summafunktion derivaatta on sen termien derivaattojen summa.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Derivointioperaation lineaarisuussäännöt</strong></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(D(a f(x)) = a Df(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D(f(x)+g(x)) = Df(x) + Dg(x)\)</span></p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(-3x^3 + 5x^2 - 4x + 7\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(-3x^3 + 5x^2 - 4x + 7) =-3\cdot 3x^2+5\cdot 2x - 4\cdot 1+ 0 =-9 x^2+ 10 x -4 \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(5x^2 + \frac {2}{x^2} - 5\sqrt{x} + 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(5x^2 + \frac {2}{x^2} - 5\sqrt{x} + 3) =10x - \frac {2\cdot 2}{x^3}-5\frac {1}{2\sqrt{x}}=10x-\frac {4}{x^3}-\frac {5}{2\sqrt{x}}\)</span></p>
+</div>
+</div>
+<div class="section" id="erikoisfunktioiden-derivoimiskaavoja">
+<h2>Erikoisfunktioiden derivoimiskaavoja<a class="headerlink" href="#erikoisfunktioiden-derivoimiskaavoja" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tavallisimpien erikoisfunktioiden derivoimiskaavoja</strong></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} sin(x) = cos(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} cos(x) = - sin(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} tan(x) = \frac {1}{cos(x)^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} e^x = e^x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} ln(x) = \frac {1}{x}\)</span></p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(5 sin(x) - 2 cos(x) - 3 ln(x) + 4 e^x\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(5 sin(x) - 2 cos(x) - 3 ln(x) + 4 e^x)\)</span> =</p>
+<p><span class="math notranslate nohighlight">\(5 cos(x) + 2 sin(x) - \frac {3}{x} + 4 e^x\)</span></p>
+</div>
+</div>
+<div class="section" id="derivointi-wolframalpha-laskimella">
+<h2>Derivointi WolframAlpha laskimella<a class="headerlink" href="#derivointi-wolframalpha-laskimella" title="Permalink to this headline">¶</a></h2>
+<p>esim. WoframAlpha-komento  <span class="math notranslate nohighlight">\(\color {red} {D(-3x^3 + 5x^2 - 4x + 7)}\)</span></p>
+<p>antaa vastaukseksi <span class="math notranslate nohighlight">\(\color {blue} {-9x^2+10x-4}\)</span></p>
+</div>
+<div class="section" id="tulon-ja-osamaaran-derivoimiskaavat">
+<h2>Tulon ja osamäärän derivoimiskaavat<a class="headerlink" href="#tulon-ja-osamaaran-derivoimiskaavat" title="Permalink to this headline">¶</a></h2>
+<p>Perusfunktioista voidaan lineaariyhdistelmien lisäksi muodostaa monimutkaisempia funktioita kerto- ja jakolaskun avulla. Näiden funktioiden derivoinnissa tarvitaan <strong>tulon ja osamäärän derivoimiskaavoja</strong>.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tulon derivoimiskaava</strong></p>
+<p><span class="math notranslate nohighlight">\(D\hspace{2mm}(f(x)\cdot g(x)) = f'(x)\cdot g(x) + f(x)\cdot g'(x)\)</span></p>
+<p>Tulon derivaatta on summalauseke, jossa on derivoitu yhtä tekijää kerrallaan muiden pysyessä ennallaan.<br />
+Periaate on sama kun tulossa on enemmän kuin kaksi funktiota.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(x^2\cdot sin(x)\)</span></p>
+<p>Kaavan merkinnöillä <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> ja <span class="math notranslate nohighlight">\(g(x)=sin(x)\)</span><br />
+ja niiden derivaatat <span class="math notranslate nohighlight">\(f'(x) = 2x\)</span> ja <span class="math notranslate nohighlight">\(g'(x) = cos(x)\)</span></p>
+<p>Sijoitus kaavaan <span class="math notranslate nohighlight">\(D\hspace{2mm}(f(x)\cdot g(x)) = f'(x)\cdot g(x) + f(x)\cdot g'(x)\)</span> antaa</p>
+<p>D <span class="math notranslate nohighlight">\((x^2sin(x)) = 2x\cdot sin(x)+ x^2\cdot cos(x)\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\((2x+1)\cdot ln(x)\cdot e^x\)</span></p>
+<p>Nyt tulossa on kolme tekijää <span class="math notranslate nohighlight">\(f(x)=2x+1\)</span>, <span class="math notranslate nohighlight">\(g(x)=ln(x)\)</span> ja <span class="math notranslate nohighlight">\(h(x)=e^x\)</span>, joiden derivaatat ovat <span class="math notranslate nohighlight">\(f'(x) = 2\)</span> , <span class="math notranslate nohighlight">\(g'(x) = \frac {1}{x}\)</span> ja <span class="math notranslate nohighlight">\(h'(x) = e^x\)</span></p>
+<p>Tulon derivoimissäännön periaatteen mukaan saadaan kolme termiä, joissa yksi tulon <span class="math notranslate nohighlight">\(f\cdot g\cdot h\)</span> tekijä kerrallaan on derivoitu.</p>
+<p>D <span class="math notranslate nohighlight">\((2x+1)\cdot ln(x)\cdot e^x = 2\cdot ln(x)\cdot e^x + (2x+1)\cdot \frac {1}{x}\cdot e^x+(2x+1)\cdot ln(x)\cdot e^x\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Osamäärän derivoimiskaava</strong></p>
+<p><span class="math notranslate nohighlight">\(\frac {f(x)}{g(x)} = \frac {f'(x)\cdot g(x) - f(x)\cdot g'(x)}{g(x)^2}\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(\frac {sin(x)}{x}\)</span></p>
+<p>Osoittajan <span class="math notranslate nohighlight">\(f(x)=sin(x)\)</span>, nimittäjän <span class="math notranslate nohighlight">\(g(x)=x\)</span> lisäksi tarvitaan derivaatat <span class="math notranslate nohighlight">\(f'(x) = cos(x)\)</span> ja <span class="math notranslate nohighlight">\(g'(x) = 1\)</span></p>
+<p>Sijoittamalla nämä osamäärän derivoimiskaavaan, saadaan</p>
+<p>D <span class="math notranslate nohighlight">\(\frac {sin(x)}{x} = \frac {cos(x)\cdot x-sin(x)\cdot 1}{x^2} = \frac {x\cdot cos(x)-sin(x)}{x^2}\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi <span class="math notranslate nohighlight">\(\frac {2x}{5x+1}\)</span></p>
+<p>Osoittajan <span class="math notranslate nohighlight">\(f(x)=2x\)</span>, nimittäjän <span class="math notranslate nohighlight">\(g(x)=5x+1\)</span> lisäksi tarvitaan derivaatat <span class="math notranslate nohighlight">\(f'(x) = 2\)</span> ja <span class="math notranslate nohighlight">\(g'(x) = 5\)</span></p>
+<p>Sijoittamalla nämä osamäärän derivoimiskaavaan, saadaan</p>
+<p>D <span class="math notranslate nohighlight">\(\frac {2x}{5x+1} = \frac {2\cdot (5x+1)-2x\cdot 5}{(5x+1)^2} = \frac {10x+2-10x}{(5x+1)^2}=\frac {2}{(5x+1)^2}\)</span></p>
+</div>
+</div>
+<div class="section" id="yhdistetyn-funktion-derivaatta">
+<h2>Yhdistetyn funktion derivaatta<a class="headerlink" href="#yhdistetyn-funktion-derivaatta" title="Permalink to this headline">¶</a></h2>
+<p>Perusfunktioista voidaan muodostaa monimutkaisempia funktiota myös asettamalla niitä sisäkkäin. Niistä käytetään nimitystä <strong>yhdistetyt funktiot</strong>.</p>
+<p>Esimerkiksi funktio y = cos(4x+1) on muodostettu kosinifunktiosta, jonka sisällä on polynomi 4x+1.
+Funktiota y = cos(x) kutsutaan <strong>ulkofunktioksi</strong> ja funktiota y = 4x+1 <strong>sisäfunktioksi</strong></p>
+<p>Funktion <span class="math notranslate nohighlight">\(e^{-2x^2}\)</span> ulkofunktio on y = <span class="math notranslate nohighlight">\(e^x\)</span> ja sisäfunktio <span class="math notranslate nohighlight">\(-2x^2\)</span></p>
+<p>Funktion <span class="math notranslate nohighlight">\((3x+1)^4\)</span> ulkofunktio on y = <span class="math notranslate nohighlight">\(x^4\)</span>  ja sisäfunktio y = 3 x + 1</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Yhdistetyn funktion derivaatta</strong></p>
+<p><span class="math notranslate nohighlight">\(D\hspace{2mm} g(f(x)) = g'(f(x))\cdot f'(x)\)</span></p>
+<p>Kaavaa kutsutaan usein <strong>ketjusäännöksi</strong>, mikä viittaa siihen, että yhdistetyn funktion derivaatta on ulkofunktion derivaatan ja sisäfunktion derivaatan tulo.  Mikäli yhdistetty funktio koostuu useammasta kuin kahdesta sisäkkäisestä funktiosta, jokainen ketjussa oleva funktio derivoidaan.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Derivoi a) <span class="math notranslate nohighlight">\(cos(4x+1)\)</span>  b) <span class="math notranslate nohighlight">\(e^{-2x^2}\)</span>  c) <span class="math notranslate nohighlight">\((3x+1)^4\)</span></p>
+<p>a) Ulkofunktio g(x)= cos(x) ja sisäfunktio f(x) = 4x+1.<br />
+Derivaatat g’(x)=-sin(x) ja f’(x) = 4 =&gt;<br />
+D <span class="math notranslate nohighlight">\(cos(4x+1) = g'(f(x))\cdot f'(x) = -sin(4x+1)\cdot 4 = -4 sin(4x+1)\)</span></p>
+<p>b) Ulkofunktio <span class="math notranslate nohighlight">\(g(x)= e^x\)</span> ja sisäfunktio <span class="math notranslate nohighlight">\(f(x) = -2x^2\)</span>.<br />
+Derivaatat <span class="math notranslate nohighlight">\(g'(x)=e^x\)</span> ja <span class="math notranslate nohighlight">\(f'(x) = -4x\)</span> =&gt;<br />
+D <span class="math notranslate nohighlight">\(e^{-2x^2} = g'(f(x))\cdot f'(x) = e^{-2x^2}\cdot (-4x) = -4x e^{-2x^2}\)</span></p>
+<p>c) Ulkofunktio <span class="math notranslate nohighlight">\(g(x)= x^4\)</span> ja sisäfunktio f(x) = 3x+1.<br />
+Derivaatat <span class="math notranslate nohighlight">\(g'(x)=4 x^3\)</span> ja f’(x) = 3 =&gt;<br />
+D <span class="math notranslate nohighlight">\((3x+1)^4 = g'(f(x))\cdot f'(x) = 4(3x+1)^3\cdot 3 = 12 (3x+1)^3\)</span></p>
+</div>
+<p>Yhdistetyn funktion derivoimiskaavan käyttöä helpottaa, kun kaava puretaan useaksi kaavaksi tavallisille ulkofunktoille.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Yhdistetyn funktion derivointikaavoja eri ulkofunktioille</strong></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} sin(f(x)) = cos(x)\cdot f'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} cos(f(x)) =-sin(x)\cdot f'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} e^{f(x)}  = e^{f(x)}\cdot f'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} ln(f(x))  = \frac {f'(x)}{f(x)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} {f(x)}^n  = n {f(x)}^{n-1}\cdot f'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D\hspace{2mm} \sqrt{f(x)} = \frac {f'(x)}{2\sqrt{f(x)}}\)</span></p></li>
+</ol>
+</div>
+<p>Esimerkkejä:</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske  D <span class="math notranslate nohighlight">\(sin(5x)\)</span>  </p>
+<p>D <span class="math notranslate nohighlight">\(sin(5x)\)</span> =<span class="math notranslate nohighlight">\(cos(5x)\cdot 5 = 5\hspace{1mm}cos(5x)\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske  D <span class="math notranslate nohighlight">\((4x+7)^3\)</span>  </p>
+<p>D <span class="math notranslate nohighlight">\((4x+7)^3\)</span>=<span class="math notranslate nohighlight">\(3(4x+7)^2\cdot 4 = 12\hspace{1mm}(4x+7)^2\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske  D <span class="math notranslate nohighlight">\(cos(2x^2)\)</span>  </p>
+<p>D <span class="math notranslate nohighlight">\(cos(2x^2)\)</span> = <span class="math notranslate nohighlight">\(-sin(2x^2)\cdot 4x = -4x\hspace{1mm}sin(2x^2)\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske  D <span class="math notranslate nohighlight">\(ln(2x+3)\)</span>  </p>
+<p>D <span class="math notranslate nohighlight">\(ln(2x+3)\)</span> = <span class="math notranslate nohighlight">\(\frac {2}{2x+3} \)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Laske  D<span class="math notranslate nohighlight">\(\sqrt{x^2+5}\)</span>  </p>
+<p>D<span class="math notranslate nohighlight">\(\sqrt{x^2+5}\)</span> =  <span class="math notranslate nohighlight">\(\frac {1}{2\sqrt{x^2+5}}\cdot 2x =\frac {x}{\sqrt{x^2+5}}\)</span></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="derivaatta.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Derivaatta</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="dkaavat2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Osittaisderivaatat</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

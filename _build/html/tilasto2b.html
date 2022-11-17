@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regressioanalyysi &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Raja-arvot" href="rajaarvo.html" />
+    <link rel="prev" title="Tilastollinen virheenarviointi" href="tilasto2a.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tilasto2b.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jteeriaho/rmatikka.git/main?urlpath=tree/tilasto2b.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-lineaarinen-regressio-pienimman-neliosumman-suora">
+   Yhden muuttujan lineaarinen regressio - pienimmän neliösumman suora
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki">
+     Esimerkki
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monen-muuttujan-lineaarinen-regressio-vah-2-selittavaa-muuttujaa">
+     Monen muuttujan lineaarinen regressio  ( väh. 2 selittävää muuttujaa)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epalineaarisia-regressiomalleja">
+   Epälineaarisia regressiomalleja
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Regressioanalyysi</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-lineaarinen-regressio-pienimman-neliosumman-suora">
+   Yhden muuttujan lineaarinen regressio - pienimmän neliösumman suora
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esimerkki">
+     Esimerkki
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monen-muuttujan-lineaarinen-regressio-vah-2-selittavaa-muuttujaa">
+     Monen muuttujan lineaarinen regressio  ( väh. 2 selittävää muuttujaa)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epalineaarisia-regressiomalleja">
+   Epälineaarisia regressiomalleja
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="regressioanalyysi">
+<h1>Regressioanalyysi<a class="headerlink" href="#regressioanalyysi" title="Permalink to this headline">¶</a></h1>
+<p>Regressioanalyysissä tutkitaan yhden tai useamman selittävän muuttujan vaikutusta selitettävään muuttujaan.</p>
+<p>Analyysin tuloksena saadaan matemaattinen malli <span class="math notranslate nohighlight">\(y = f(x_1,..., x_n)\)</span>, missä y on ns. <strong>selitettävä muuttuja</strong> <em>(dependent variable)</em> ja <span class="math notranslate nohighlight">\(x_1,....,x_n\)</span>  ovat ns. <strong>selittäviä muuttujia</strong> <em>(independent variables)</em>.</p>
+<p>Yleisimmässä, ns. <strong>lineaarisessa regressiomallissa</strong>  pyritään löytämään lineaarinen funktio<br />
+<span class="math notranslate nohighlight">\(y = b_0 + b_1 x_1 +....+ b_n x_n\)</span> , joka kuvaa muuttujan y riippuvuutta selittävistä muuttujista <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
+<p>Lineaariseen regressioanalyysiin tarvittavat funktiot löytyvät hyvistä laskimista, sekä Excelistä.</p>
+<div class="section" id="yhden-muuttujan-lineaarinen-regressio-pienimman-neliosumman-suora">
+<h2>Yhden muuttujan lineaarinen regressio - pienimmän neliösumman suora<a class="headerlink" href="#yhden-muuttujan-lineaarinen-regressio-pienimman-neliosumman-suora" title="Permalink to this headline">¶</a></h2>
+<p><strong>Yhden muuttujan regressioanalyysissä</strong>  (x,y) - pareja sisältävään mittausdataan pyritään sovittamaan suoran yhtälö y = a x + b siten, että suora mahdollisimman hyvin kuvaisi muuttujien x ja y välistä riippuvuutta.</p>
+<p>Suoran sovitus tapahtuu määrittämällä kulmakerroin a  ja vakio b siten, että havaittujen y-arvojen ja mallista laskettujen y - arvojen erotusten <span class="math notranslate nohighlight">\(y_i - (a x_i + b)\)</span> neliöiden summa on mahdollisimman pieni. Tästä periaatteesta johtuu nimitys <strong>pienimmän neliösumman suora</strong></p>
+<div class="section" id="esimerkki">
+<h3>Esimerkki<a class="headerlink" href="#esimerkki" title="Permalink to this headline">¶</a></h3>
+<p><strong>Määritä regressiosuoran y = a x + b  parametrit a ja b perustuen seuraavaan mittausdataan</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>x</p></th>
+<th class="text-align:center head"><p>1.0</p></th>
+<th class="text-align:center head"><p>1.5</p></th>
+<th class="text-align:center head"><p>2.0</p></th>
+<th class="text-align:center head"><p>2.5</p></th>
+<th class="text-align:center head"><p>3.0</p></th>
+<th class="text-align:center head"><p>3.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>y</p></td>
+<td class="text-align:center"><p>42.5</p></td>
+<td class="text-align:center"><p>42.8</p></td>
+<td class="text-align:center"><p>43.2</p></td>
+<td class="text-align:center"><p>43.5</p></td>
+<td class="text-align:center"><p>43.9</p></td>
+<td class="text-align:center"><p>44.2</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tapa1: (harvinainen, yleensä regressioanalyysi tehdään tilasto-ohjelmistolla tai Excelillä)</p>
+<p>Muodostetaan ns. residuaalivektori <strong>e</strong> mallin antamien ja havaittujen y-arvojen erotuksista.<br />
+<span class="math notranslate nohighlight">\(e = (a\cdot 1+b-42.5, a\cdot1.5+b-42.8, a\cdot2+b-43.2,a\cdot2.5+b-43.5, a\cdot3+b-43.9,a\cdot3.5+b-44.2)\)</span></p>
+<p>Residuaalivektorin komponentit näkyvä ao. kuvassa pystyviivoina<br />
+<img alt="res" src="_images/kuva60.PNG" /></p>
+<p>Minimoidaan residuaalien neliösumma käyttäen WolframAlphan minimize komentoa.<br />
+<span class="math notranslate nohighlight">\(\text{minimize } (a\cdot 1.0+ b-42.5)^2 + (a\cdot 1.5+ b-42.8)^2+ (a\cdot 2+ b-43.2)^2\)</span><br />
+<span class="math notranslate nohighlight">\(+ (a\cdot 2.5+ b-43.8)^2+ (a\cdot 3+ b-43.9)^2+ (a\cdot 3.5+ b-44.2)^2\)</span></p>
+<p>Tulos:  kulmakerroin a = 0.6914 ja vakio b = 41.7943<br />
+<img alt="res2" src="_images/kuva61.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2. Yhden muuttujan regressioanalyysi Excelillä - ohjeet</p>
+<blockquote>
+<div><p>Mikäli parametrien a ja b arvot riittävät ilman virherajojen määritystä, on helpointa käyttää Excelin grafiikkaan &gt; liittyvää Trendiviiva toimintoa.<br />
+Siinä havaintodatasta luodaan ensin pistekaavio, johon lisätään lineaarinen trendiviiva yhtälöineen ao. kuvasarjan mukaisesti.
+<img alt="trend" src="_images/kuva62.PNG" /></p>
+</div></blockquote>
+<blockquote>
+<div><p>Mittaussarjaan perustuva regressioanalyysi on altis satunnaisuudesta otantavirheelle.<br />
+Satunnaisuuden lisäksi y:n arvojen vaihteluun voi olla muitakin selittäviä tekijöitä kuin muuttuja x.</p>
+<p>Parametrien satunnaiseen vaihteluun ja mallin hyvyyteen liittyviä tuloksia saadaan käyttämällä Excelin funktiota LINREGR, joka antaa mm. parametrien a ja b keskivirheet, sekä mallin selitysasteen R².<br />
+<img alt="trend" src="_images/kuva63.PNG" /></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="monen-muuttujan-lineaarinen-regressio-vah-2-selittavaa-muuttujaa">
+<h3>Monen muuttujan lineaarinen regressio  ( väh. 2 selittävää muuttujaa)<a class="headerlink" href="#monen-muuttujan-lineaarinen-regressio-vah-2-selittavaa-muuttujaa" title="Permalink to this headline">¶</a></h3>
+<p>Jos data koostuu pistekolmikoista <span class="math notranslate nohighlight">\((x_1,x_2,y)\)</span>, missä y on selitettävä muuttuja ja <span class="math notranslate nohighlight">\(x_1\)</span> ja <span class="math notranslate nohighlight">\(x_2\)</span> selittäviä muuttujia, niin lineaarinen malli on muotoa <span class="math notranslate nohighlight">\(y = a_1 x_1 + a_2 x_2 + b\)</span>.  Geometrisesti malli edustaa tasoa 3D avaruudessa.</p>
+<p>Mallin parametreina on kaksi kulmakerrointa <span class="math notranslate nohighlight">\(a_1\)</span> ja <span class="math notranslate nohighlight">\(a_2\)</span> sekä vakiotermi b.</p>
+<p>Parametrien arvot määräytyvät siten, että residuaalien <span class="math notranslate nohighlight">\(e_i = y_i – (ax_{1i} + bx_{2i} + c)\)</span>   neliösummalla on minimikohta.</p>
+<p><img alt="3d" src="_images/kuva64.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Monen muuttujan regressioanalyysi Excelillä - esimerkki ja ohjeet</p>
+<blockquote>
+<div><p>Taulukossa on <a class="reference external" href="http://nettiauto.com">nettiauto.com</a> sivustolta tietoja Skoda Octavia -merkkisten vaihtoautojen hinnoista.<br />
+Selittäviä muuttujia on km-määrä ja vuosimalli.<br />
+Kuvasarja esittää regressioanalyysi Excel:n funktiota LINREGR käyttäen</p>
+</div></blockquote>
+<p><img alt="trend" src="_images/kuva65.PNG" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="epalineaarisia-regressiomalleja">
+<h2>Epälineaarisia regressiomalleja<a class="headerlink" href="#epalineaarisia-regressiomalleja" title="Permalink to this headline">¶</a></h2>
+<p>Excelin grafiikan trendiviiva - toiminto sisältää lineaarisen mallin lisäksi muitakin yhden muuttujan regressiomalleja:</p>
+<p>eksponenttimalli <span class="math notranslate nohighlight">\(y = a e^{bx}\)</span>, logaritmimalli <span class="math notranslate nohighlight">\(y = a \text{ ln}(x) +  b\)</span>, polynomimallit asteluvuille 0 - 6, esim. <span class="math notranslate nohighlight">\(y =a x^2 + b x + c \)</span>, potenssimalli <span class="math notranslate nohighlight">\(y = a x^{b}\)</span>.</p>
+<p>Excel-ohje:</p>
+<ol class="simple">
+<li><p>Luo pistekaavio datasta</p></li>
+<li><p>Klikkaa jotain datapistettä käyttäen hiiren oikeaa painiketta. Valitse Lisää Trendiviiva</p></li>
+<li><p>Valitse haluamasi malli kuvagalleriasta</p></li>
+<li><p>Rastita kohta Näytä kaava kaaviossa</p></li>
+</ol>
+<p>Kuvissa eksponenttimallin ja 2. asteen polynomimallin sovitus datapisteisiin.<br />
+<img alt="malleja" src="_images/kuva67.PNG" /></p>
+<p>Epälineaarisissa malleissa ei voi käyttää LINREGR funktiota, eikä niistä siten ole saatavissa mallin parametrien keskivirheitä.  Mallin selitysaste <span class="math notranslate nohighlight">\(R^2\)</span> sen sijaan saadaan näkyviin rastittamalla sitä vastaava optio trendiviiva -lomakkeessa.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tilasto2a.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tilastollinen virheenarviointi</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="rajaarvo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Raja-arvot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

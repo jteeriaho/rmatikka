@@ -1,0 +1,39 @@
+# Sisältö
+
+format: jb-book
+root: intro
+parts:
+  - caption: Elinkaarilaskentaa
+    chapters:
+    - file: elinkaarimalli
+    - file: koronkorko
+    - file: elinkaarimenetelmat
+    
+  - caption: Tilasto-oppia
+    chapters:
+    - file: tilasto1a
+    - file: tilasto1b
+    - file: tilasto2a
+    - file: tilasto2b
+    
+  - caption: Derivaatan määritelmä
+    chapters:
+    - file: rajaarvo
+    - file: derivaatta
+  - caption: Derivoimistekniikkaa
+    chapters:
+    - file: dkaavat1
+    - file: dkaavat2
+  - caption: Sovelluksia
+    chapters:
+    - file: virhearvio
+    - file: optimointi
+    - file: newton
+  - caption: Lineaarinen optimointi
+    chapters:
+    - file: kuljetusprobleema
+  - caption: Integraalilaskentaa
+    chapters:
+    - file: integraalifunktio
+    - file: maarattyintegraali
+    - file: intsovelluksia

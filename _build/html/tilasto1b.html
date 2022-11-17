@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todennäköisyysjakaumat &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tilastollinen virheenarviointi" href="tilasto2a.html" />
+    <link rel="prev" title="Tilastolliset tunnusluvut" href="tilasto1a.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tilasto1b.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jteeriaho/rmatikka.git/main?urlpath=tree/tilasto1b.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todennakoisyyden-maaritelma">
+   Todennäköisyyden määritelmä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diskreetin-todennakoisyysjakauman-odotusarvo-ja-keskihajonta">
+   Diskreetin todennäköisyysjakauman odotusarvo ja keskihajonta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jatkuvat-todennakoisyysjakaumat">
+   Jatkuvat todennäköisyysjakaumat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tiheysfunktio-p-x">
+     Tiheysfunktio p(x)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kertymafunktio-varphi-x">
+     Kertymäfunktio
+     <span class="math notranslate nohighlight">
+      \(\varphi(x)\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gaussin-normaalijakauma">
+   Gaussin normaalijakauma
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normaalijakauman-funktiot-excelissa">
+     Normaalijakauman funktiot Excelissä
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normaalijakauman-kayton-perustapauksia">
+   Normaalijakauman käytön perustapauksia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Todennäköisyysjakaumat</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todennakoisyyden-maaritelma">
+   Todennäköisyyden määritelmä
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diskreetin-todennakoisyysjakauman-odotusarvo-ja-keskihajonta">
+   Diskreetin todennäköisyysjakauman odotusarvo ja keskihajonta
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jatkuvat-todennakoisyysjakaumat">
+   Jatkuvat todennäköisyysjakaumat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tiheysfunktio-p-x">
+     Tiheysfunktio p(x)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kertymafunktio-varphi-x">
+     Kertymäfunktio
+     <span class="math notranslate nohighlight">
+      \(\varphi(x)\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gaussin-normaalijakauma">
+   Gaussin normaalijakauma
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normaalijakauman-funktiot-excelissa">
+     Normaalijakauman funktiot Excelissä
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normaalijakauman-kayton-perustapauksia">
+   Normaalijakauman käytön perustapauksia
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="todennakoisyysjakaumat">
+<h1>Todennäköisyysjakaumat<a class="headerlink" href="#todennakoisyysjakaumat" title="Permalink to this headline">¶</a></h1>
+<p>Tilasto-oppiin läheisesti liittyvä käsite on <strong>todennäköisyys</strong>.</p>
+<p>Monet tilastomuuttujat, kuten esim. ihmisen pituus tai elinaika, tai vaikkapa metsikön puiden läpimitta, noudattavat jakaumaa, jota voidaan kuvata jollakin tunnetulla todennäköisyysjakaumalla. Yleisesti käytettyjä jakaumia ovat mm.  Gaussin normaalijakauma ja Weibull-jakauma. Todennäköisyysjakaumien käyttö tilastomuuttujan mallinnuksessa säästää tiedonkeruuta. Kun dataa on riittävästi mallin parametrien laskemiseen, voidaan siirtyä datan keruusta matemaattisen mallin avulla suoritettavaan laskentaan.</p>
+<div class="section" id="todennakoisyyden-maaritelma">
+<h2>Todennäköisyyden määritelmä<a class="headerlink" href="#todennakoisyyden-maaritelma" title="Permalink to this headline">¶</a></h2>
+<p>Todennäköisyys jaetaan usein kahteen tyyppiin: <strong>klassinen todennäköisyys</strong> ja <strong>tilastollinen todennäköisyys</strong> . Klassista todennäköisyyttä tarvitaan esim. kun lasketaan korttipelien erilaisten käsien todennäköisyyksiä tai nopanheiton tuloksia.  Tilastollista eli empiiristä todennäköisyyttä voi hyödyntää esim. vakioveikkauksessa tai vakuutusten hinnoittelussa.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Klassinen todennäköisyys</strong></p>
+<p>Nimitykset:<br />
+E = <strong>tapahtuma-avaruus</strong> eli <em>otosavaruus</em> , joka koostuu alkeistapauksista joiden tiedetään olevan yhtä todennäköisiä<br />
+A = <strong>tapahtuma</strong>, joka on E:n osajoukko, jonka todennäköisyys halutaan laskea</p>
+<p>Tapahtuman A todennäköisyys P(A) määritellään seuraavasti:</p>
+<p><span class="math notranslate nohighlight">\(P(A)=\frac {k}{n}\)</span></p>
+<p>missä n = kaikkien mahdollisten alkeistapausten lukumäärä ja k = tapahtuman A kannalta suotuisten alkeistapausten lukumäärä</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Laatikossa on 8 palloa, joista 4 punaista, 3 sinistä ja 1 keltainen. Laatikosta otetaan umpimähkään 1 pallo. Millä todennäköisyydellä se on sininen?</p>
+<p>Ratkaisu P(sininen)=<span class="math notranslate nohighlight">\(\frac {3}{8}\)</span><br />
+<em>(8 yhtä todennäköisestä alkeistapauksesta 3 on “suotuisaa” eli antaa sinisen pallon)</em></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tilastollinen eli empiirinen todennäköisyys</strong></p>
+<p>Tapahtuman A tilastollinen todennäköisyys on tapahtuman A suhteellisen frekvenssin</p>
+<p>P(A)= <span class="math notranslate nohighlight">\(\frac {n(A)}{n}\)</span></p>
+<p>raja-arvo, kun satunnaista koetta toistetaan äärettömän monta kertaa.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Ampumahiihtäjä Tero Sipilä ampui makuulta vuosien 2021 aikana 670 kilpailulaukausta, joista 525 osui maaliin.  Mikä on Teron osumistodennäköisyys makuuammunnassa?</p>
+<p>Ratkaisu P(osuma)=<span class="math notranslate nohighlight">\(\frac {525}{670} = 0.784 = 78.4\%\)</span></p>
+</div>
+<p>Esim. <strong>kolikon heitossa</strong> kruunan klassinen todennäköisyys on 1/2, koska kruuna on yksi kahdesta yhtä todennäköisestä alkeistapauksesta.</p>
+<p>Tilastollinen todennäköisyys on 50%, jos heittojen määrän lähestyessä ääretöntä kruunien määrä lähestyy 50 prosenttia.</p>
+</div>
+<div class="section" id="diskreetin-todennakoisyysjakauman-odotusarvo-ja-keskihajonta">
+<h2>Diskreetin todennäköisyysjakauman odotusarvo ja keskihajonta<a class="headerlink" href="#diskreetin-todennakoisyysjakauman-odotusarvo-ja-keskihajonta" title="Permalink to this headline">¶</a></h2>
+<p>Kun jossakin toistokokeessa on äärellinen määrä mahdollisia tuloksia, joiden todennäköisyydet tunnetaan, puhutaan <strong>diskreetistä todennäköisyysjakaumasta</strong>.</p>
+<p>Jakauma voidaan esittää frekvenssitaulukkoa muistuttavana taulukkona, jonka sarakkeina ovat muuttujan mahdolliset arvot <span class="math notranslate nohighlight">\(x_i\)</span> ja niiden todennäköisyydet <span class="math notranslate nohighlight">\(p_i\)</span>.</p>
+<p>Jakaumaa käyttäen voidaan laskea kaksi parametria: <strong>odotusarvo</strong> ja <strong>keskihajonta</strong>.</p>
+<p>Odotusarvo (expected value) tarkoittaa raja-arvoa, jota toistokokeiden keskiarvo lähestyisi, kun toistojen määrä lähestyisi ääretöntä.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Diskreetin todennäköisyysjakauman parametrit</strong></p>
+<p>Odotusarvo <span class="math notranslate nohighlight">\(\hspace{5mm}\mu=\sum p_ix_i\)</span></p>
+<p>Keskihajonta <span class="math notranslate nohighlight">\(\hspace{2mm}\sigma=\sum p_i(x_i-\mu)^2\)</span></p>
+</div>
+<p>Ampumahiihdon pystyammunnassa on maalina 5 taulua, jotka pitää pudottaa. Erään suomalaisen ampujahiihtäjän todennäköisyydet eri tuloksille ovat viimeisen kahden vuoden kilpailuissa olleet seuraavat:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>osumat</p></th>
+<th class="head"><p>todennäköisyys</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>5</p></td>
+<td><p>4.5%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>4</p></td>
+<td><p>58.2%</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>3</p></td>
+<td><p>32.5%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>2</p></td>
+<td><p>4.6%</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td><p>0.2%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td><p>0%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Mikä on tämän perusteella yksittäisen ammunnan tuloksen odotusarvo ja keskihajonta?</p>
+<p>Odotusarvo <span class="math notranslate nohighlight">\(\mu=\sum p_ix_i=0.045\cdot 5+0.582\cdot 4+0.325\cdot 3+0.046\cdot 2+0.002\cdot 1=3.62\)</span></p>
+<p>Keskihajonta <span class="math notranslate nohighlight">\(\sigma=\sum p_i(x_i-\mu)^2\)</span><br />
+<span class="math notranslate nohighlight">\(\hspace{30mm}=0.045\cdot (5-3.62)^2+0.582\cdot (4-3.62)^2\)</span><br />
+<span class="math notranslate nohighlight">\(\hspace{30mm}+0.325\cdot (3-3.62)^2+0.046\cdot (2-3.62)^2+0.002\cdot (1-3.62)^2=0.43\)</span></p>
+</div>
+<div class="section" id="jatkuvat-todennakoisyysjakaumat">
+<h2>Jatkuvat todennäköisyysjakaumat<a class="headerlink" href="#jatkuvat-todennakoisyysjakaumat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tiheysfunktio-p-x">
+<h3>Tiheysfunktio p(x)<a class="headerlink" href="#tiheysfunktio-p-x" title="Permalink to this headline">¶</a></h3>
+<p>Jatkuvassa todennäköisyysjakaumassa muuttuja voi saada mitä tahansa arvoja tietyllä välillä. Diskreetin jakauman taulukko <span class="math notranslate nohighlight">\((x_i,p_i)\)</span> -pareineen korvautuu <strong>tiheysfunktiolla p(x)</strong>, jonka arvo kuvaa muuttujan arvon x todennäköisyyttä.</p>
+<p>Tiheysfunktion englanninkielinen nimi on <em>probability density function</em> ja useissa symbolisen laskennan ohjelmistoissa sen lyhenne on pdf(x)</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Tiheysfunktion p(x) ominaisuuksia</strong></p>
+<p><span class="math notranslate nohighlight">\(1.\)</span> Funktio p(x) kuvaa muuttujan arvon x todennäköisyyttä.</p>
+<p><span class="math notranslate nohighlight">\(2.\)</span> <span class="math notranslate nohighlight">\(p(x) \ge 0\)</span>  ts. tiheysfunktio voi saada vain positiivisia arvoja.</p>
+<p><span class="math notranslate nohighlight">\(3.\)</span> Tiheysfunktion p(x) ja x- akselin välinen pinta-ala on 1
+<img alt="pdf" src="_images/kuva45.PNG" /></p>
+</div>
+</div>
+<div class="section" id="kertymafunktio-varphi-x">
+<h3>Kertymäfunktio <span class="math notranslate nohighlight">\(\varphi(x)\)</span><a class="headerlink" href="#kertymafunktio-varphi-x" title="Permalink to this headline">¶</a></h3>
+<p><strong>Kertymäfunktion <span class="math notranslate nohighlight">\(\varphi(x)\)</span></strong> arvo pisteessä x antaa todennäköisyyden sille, että muuttujan arvo on pienempi kuin x.</p>
+<p>Kertymäfunktio laskee tiheysfunktion p(x) ja x- akselin välisen pinta-alan välillä <span class="math notranslate nohighlight">\(]-\infty ,x]\)</span>.</p>
+<p>Kertymäfunktio on englanniksi <em>cumulative density function</em> ja sen lyhenne useissa symbolisen laskennan ohjelmistoissa on cdf(x)</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Kertymäfunktion <span class="math notranslate nohighlight">\(\varphi(x)\)</span> ominaisuuksia</strong></p>
+<p><span class="math notranslate nohighlight">\(1.\)</span> <span class="math notranslate nohighlight">\(\varphi(x_0) = P(x \le x_0) \)</span> <em>(=todennäköisyys, että <span class="math notranslate nohighlight">\(x \le x_0\)</span>)</em></p>
+<p><span class="math notranslate nohighlight">\(2.\)</span> Kertymäfunktio kasvaa nollasta maksimiarvoonsa 1</p>
+<p><span class="math notranslate nohighlight">\(3.\)</span> Kuvassa keltaisen alueen pinta-ala edustaa kertymäfunktion arvoa kohdassa x
+<img alt="pdf" src="_images/kuva46.PNG" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="gaussin-normaalijakauma">
+<h2>Gaussin normaalijakauma<a class="headerlink" href="#gaussin-normaalijakauma" title="Permalink to this headline">¶</a></h2>
+<p>Tavallisin ja ehkä yleisimmin käytetty jatkuva jakauma on <strong>Gaussin normaalijakauma</strong>, jonka tiheysfunktion ja kertymäfunktion määräävät kaksi parametria:  keskiarvo μ  ja keskihajonta σ</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Gaussin normaalijakauman tiheys- ja kertymäfunktiot</strong></p>
+<p>Tiheysfunktio <span class="math notranslate nohighlight">\(p(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^-{\frac{(x-\mu)^2}{2\sigma^{2}}}\)</span></p>
+<p>Kertymäfunktio <span class="math notranslate nohighlight">\(\varphi(x) = \frac{1}{2}[1+erf(\frac{x-\mu}{\sqrt{2}\sigma})]\)</span></p>
+<p><em>kaavan erf(x) on erikoisfunktio, jonka englanninkielinen nimitys on “error function”</em></p>
+<p>Tiheysfunktion kuvaajaa sanotaan Gaussin kellokäyräksi
+<img alt="pdf" src="_images/kuva47.PNG" /></p>
+<p>Normaalijakauman kertymäfunktion kuvaaja näyttää seuraavalta:<br />
+<img alt="cdf" src="_images/kuva48.PNG" /></p>
+</div>
+<p>Ym. kaavoja ei tarvitse tuntea esitetyssä muodossaan.  Käytännössä normaalijakauman tiheys- ja kertymäfunktiot löytyvät helposti käytettävässä muodossa mm. Excelissä, sekä useissa symbolisissa laskimissa.</p>
+<p>Merkintä:   Jos muuttuja x noudattaa normaalijakaumaa, jossa keskiarvo on 𝜇  ja keskihajonta σ , merkitään tätä yleisesti  x ~  N(μ, σ)   tai  pitemmässä muodossa x ~ normal(μ, σ)</p>
+<p>Sanotaan myös:  <em>” x on normaalijakautunut parametrein μ ja  σ”</em></p>
+<div class="section" id="normaalijakauman-funktiot-excelissa">
+<h3>Normaalijakauman funktiot Excelissä<a class="headerlink" href="#normaalijakauman-funktiot-excelissa" title="Permalink to this headline">¶</a></h3>
+<p><em>suomenkielinen Excel:</em>    <strong>= NORMAALIJAKAUMA</strong>(muuttujan arvo; keskiarvo; keskihajonta; kumulatiivinen)</p>
+<p><em>englanninkielinen Excel:</em> <strong>= NORM.DIST</strong>(muuttujan arvo; keskiarvo; keskihajonta; kumulatiivinen)</p>
+<p>Funktion argumentit:  muuttujan x arvo, keskiarvo, keskihajonta, sekä boolen muuttuja kumulatiivinen, johon sijoitetaan 0 tai 1. (Arvo 0 merkitsee tiheysfunktiota ja arvo 1 kertymäfunktiota)</p>
+<p>Lisäksi Excelissä on kertymäfunktion <span class="math notranslate nohighlight">\(\varphi(x)\)</span> käänteisfunktio <strong>NORMAALIJAKAUMA.KÄÄNTEINEN</strong>, englanninkielisessä Excelissä <strong>NORMINV</strong>, jonka käytöstä on esimerkkejä tuonnenpana.</p>
+</div>
+</div>
+<div class="section" id="normaalijakauman-kayton-perustapauksia">
+<h2>Normaalijakauman käytön perustapauksia<a class="headerlink" href="#normaalijakauman-kayton-perustapauksia" title="Permalink to this headline">¶</a></h2>
+<p>Seuraavassa oletetaan, että muuttuja <strong>x on “normaalijakautunut”</strong>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Todennäköisyys sille, että muuttujan arvo <span class="math notranslate nohighlight">\(x \le\)</span> a saadaan kertymäfunktion arvona kohdassa a</p>
+<p><img alt="pxlea" src="_images/kuva49.PNG" />
+<span class="math notranslate nohighlight">\(P(x\le a) = \varphi(a)\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Todennäköisyys sille, että muuttujan arvo <span class="math notranslate nohighlight">\(x \ge a\)</span></p>
+<p><img alt="pxlea" src="_images/kuva50.PNG" />
+<span class="math notranslate nohighlight">\(P(x\ge a) = 1 - \varphi(a)\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Todennäköisyys sille, että <span class="math notranslate nohighlight">\(a \le x \le b\)</span> </p>
+<p><img alt="pxlea" src="_images/kuva51.PNG" />
+<span class="math notranslate nohighlight">\(P(a\le x \le b) = \varphi(b)-\varphi(a)\)</span></p>
+</div>
+<p>Kääntäen voidaan kysyä annettua todennäköisyyskertymää P  vastaavaa muuttujan arvoa x.<br />
+Tällöin tarvitaan kertymäfunktion  <strong>käänteisfunktiota <span class="math notranslate nohighlight">\(\varphi ^{-1}\)</span></strong> .</p>
+<blockquote>
+<div><p>Excelissä käänteisfunktio on NORMAALIJAKAUMA.KÄÄNTEINEN  (engl. kielisessä versiossa NORM.INV)</p>
+</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">Muuttujan arvo, joka vastaa todennäköisyyskertymää P</p>
+<p><img alt="pxlea" src="_images/kuva52.PNG" />
+<span class="math notranslate nohighlight">\(x = \varphi^{-1}(P)\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Suomen miespuolisen väestön keskipituus on 180.7 cm ja keskihajonta 7.4 cm.   Oletetaan, että Suomen miespuolisen väestön pituus noudattaa normaalijakaumaa N(180.7cm, 7.4cm). a) Millä todennäköisyydellä miehen pituus <span class="math notranslate nohighlight">\(\ge 213cm\)</span>, b) Mikä on pituuden P90 prosenttipiste? c) Millä todennäköisyydellä pituus on välillä 190cm-200cm?  </p>
+<p>Vastauksia: a) 0.0000064  b) 190.2 cm   c) 9.7 pros</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>a) <span class="math notranslate nohighlight">\(P(x \ge 213) = 1 - \varphi(213) = 1-0,99999364= 0,00000636\)</span>  (n. 6 miljoonasta)<br />
+<span class="math notranslate nohighlight">\(Excel: \hspace{5mm}\color{red}{=1-NORMAALIJAKAUMA(213;180,7;7,4;1)}\)</span></p>
+<p>b) P90 prosenttipiste = <span class="math notranslate nohighlight">\(\varphi^{-1}(0.90) = 190.2 \)</span><br />
+<span class="math notranslate nohighlight">\(Excel: \hspace{5mm}\color{red}{=NORMAALIJAKAUMA.KÄÄNTEINEN(0,90;180,7;7,4)}\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(P(190\le x \le 200) = \varphi(200)-\varphi(190) = 0.996 – 0.899 = 0.097 = 9.7\%\)</span>
+<span class="math notranslate nohighlight">\(Excel: \hspace{5mm}\color{red}{=NORMAALIJAKAUMA(200;180,7;7,4,1)}\)</span><br />
+<span class="math notranslate nohighlight">\(\hspace{18mm}\color{red}{-NORMAALIJAKAUMA(190;180,7;7,4,1)}\)</span></p>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Esimerkki sepelin kelpoisuusmäärityksestä, joka perustuu normaalijakauman käyttöön.</p>
+<p>Eräs sepelimurske on kelvollista käyttötarkoitukseensa, jos enintään 2.5% sen kivistä ylittää maksimiläpimitaltaan arvon 30 mm.  Alla olevassa taulukossa on satunnaisesti valittujen 80 kivenkappaleen maksimiläpimitat työntömitalla mitattuna.  Täyttääkö murske laatukriteerin? Oletetaan, että kyseisen murskeen kivien läpimitat noudattavat normaalijakaumaa.
+<img alt="sepeli" src="_images/kuva53.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<ol class="simple">
+<li><p>Määritetään läpimittajakauman keskiarvo ja keskihajonta:<br />
+keskiarvo <span class="math notranslate nohighlight">\(\mu = 20.1\)</span>  ja  keskihajonta  <span class="math notranslate nohighlight">\(\sigma = 6.8\)</span></p></li>
+<li><p>Lasketaan todennäköisyys sille, että ko. sepelin kiven läpimitta &lt; 30 mm<br />
+<span class="math notranslate nohighlight">\(\varphi(30) = 0.927 = 92.7\% \hspace{5mm}(\color{red}{=NORMAALIJAKAUMA(30;20,1;6,8;1)})\)</span></p></li>
+<li><p>Johtopäätös: murskeen kivistä 92.7 prosenttia on läpimitaltaan alle 30 mm, kun prosenttiluvun pitäisi olla 97.5. Murske ei ole kelvollista</p></li>
+</ol>
+</div>
+</div>
+<p>Seuraavassa esimerkissä muuttuja ei ole normaalijakautunut. Tästä syystä dataa on oltava enemmän ja laskennassa ei voi käyttää normaalijakauman funktiota.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esimerkki P90 arvon määrityksestä muuttujalle, joka ei noudata normaalijakaumaa.</p>
+<p>Useiden sisäilman haitallisten yhdisteiden viitearvoina THL:n dokumenteissa ovat ns. P90 –arvoja (ts. arvoja, joita suurempia tavataan vain 10% mittauksissa). Seuraavassa on 144 mitattua sisäilman formaldehydipitoisuutta eri puolilta Suomea. Yksikkönä on 1 μg/m3  Mikä olisi niiden perusteella formaldehydin P90 – arvo pyöristettynä kokonaisluvuksi?  Arvot eivät noudata normaalijakaumaa, joten älä käytä normaalijakaumaan liittyviä funktioita.<br />
+<img alt="p90" src="_images/kuva54.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Tehtävä ratkeaa käyttämällä Excelin PROSENTTIPISTE – funktiota (engl. Percentile)</p>
+<p><span class="math notranslate nohighlight">\(\color{red}{=PROSENTTIPISTE(A1:N14;0,90)}\)</span> antaa arvoksi 14</p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(P90 = 14 μg/m^3\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tilasto1a.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tilastolliset tunnusluvut</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tilasto2a.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tilastollinen virheenarviointi</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
