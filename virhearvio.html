@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virheenarviointia derivaatoilla &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Optimointimenetelmiä" href="optimointi.html" />
+    <link rel="prev" title="Osittaisderivaatat" href="dkaavat2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/virhearvio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/virhearvio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-funktion-virhe">
+   Yhden muuttujan funktion virhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monen-muuttujan-funktion-virhe">
+   Monen muuttujan funktion virhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suhteellisen-virheen-menetelma">
+   Suhteellisen virheen menetelmä
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Virheenarviointia derivaatoilla</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-funktion-virhe">
+   Yhden muuttujan funktion virhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monen-muuttujan-funktion-virhe">
+   Monen muuttujan funktion virhe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suhteellisen-virheen-menetelma">
+   Suhteellisen virheen menetelmä
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="virheenarviointia-derivaatoilla">
+<h1>Virheenarviointia derivaatoilla<a class="headerlink" href="#virheenarviointia-derivaatoilla" title="Permalink to this headline">¶</a></h1>
+<p>Fysiikassa tekniikassa tehdään mittauksia, joihin liittyy aina tietty epävarmuus. Jos muita epävarmuustekijöitä ei ole, mittausvirheenä tai -epätarkkuutena voidaan käyttää mittauksessa käytetyn välineen tarkkuutta.  Esim. mitattaessa laudan pituutta metrinmitalla, on mittausvirhe ainakin 0.5 mm, todennäköisesti suurempikin.</p>
+<p>Kun mitatuista suureista lasketaan kaavoja käyttäen muita suureita, on tärkeä tietää, miten yksittäisten mittausten virhemarginaaleista voidaan johtaa niistä lasketun lausekkeen virhemarginaaliin. Tässä derivaatalla ja osittaisderivaatoilla on keskeinen merkitys.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Suureen x virhemarginaali voidaan ilmaista kahdella tavalla</strong></p>
+<p>absoluuttisena virheenä <span class="math notranslate nohighlight">\(\Delta{x}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\hspace{1cm}x = (2.15 \pm 0.05)\)</span> mm</p>
+<p>suhteellisena virheenä <span class="math notranslate nohighlight">\(\frac {\Delta{x}}{x}\cdot 100\%\)</span></p>
+<p><span class="math notranslate nohighlight">\(\hspace{1cm}x = 2.15 mm \pm 2.4\%\)</span></p>
+<p>esim. virtamittarin tarkkuus on usein ilmaistu suhteellisen virheen avulla</p>
+</div>
+<div class="section" id="yhden-muuttujan-funktion-virhe">
+<h2>Yhden muuttujan funktion virhe<a class="headerlink" href="#yhden-muuttujan-funktion-virhe" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Yhden muuttujan funktion virhe</strong></p>
+<p>Funktion f(x) virhe = derivaatta <span class="math notranslate nohighlight">\(\cdot\)</span> muuttujan virhe</p>
+<p><span class="math notranslate nohighlight">\(\Delta{f}=f'(x)\Delta{x}\)</span></p>
+<p>Derivaatta on käyrän tangentin kulmakerroin.</p>
+<p>Kulmakerroin määritellään funktion arvon muutoksen ja muuttujan arvon muutoksen suhteena.</p>
+<p><img alt="virhe" src="_images/kuva7.PNG" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Laske kuularingin ala virherajoineen, kun halkaisija d =<span class="math notranslate nohighlight">\((213\pm 1)\)</span> cm.</p>
+<p>Vastaus: <span class="math notranslate nohighlight">\((3.56\pm 0.04) m^2\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Ringin pinta-ala A = <span class="math notranslate nohighlight">\(\frac{\pi}{4}d^2 = \frac{\pi}{4}{2.13m}^2 = 3.5633 m^2 \)</span></p>
+<p>Alan virhe  <span class="math notranslate nohighlight">\(\Delta{A}=A'(d)\Delta{d} =\frac{\pi}{2}d\Delta{d} =\frac{\pi}{2}2.13\cdot0.01 = 0.033 m^2\)</span></p>
+<p>Virhemarginaali on tapana pyöristää aina ylöspäin, jotta suureen arvo olisi varmasti rajojen sisällä.</p>
+<p>Vastaus: A = <span class="math notranslate nohighlight">\((3.56\pm 0.04) m^2\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="monen-muuttujan-funktion-virhe">
+<h2>Monen muuttujan funktion virhe<a class="headerlink" href="#monen-muuttujan-funktion-virhe" title="Permalink to this headline">¶</a></h2>
+<p>Otetaan esimerkkinä funktio f(x,y,z), jossa on kolme muuttujaa x, y ja z.</p>
+<p>Funktiolla on kolme osittaisderivaattaa <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\)</span> ja <span class="math notranslate nohighlight">\( \frac{\partial f}{\partial z}\)</span>, jotka antavat funktion muutosnopeudet koordinaattiakselien suunnissa.</p>
+<p>Tulot <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x}\Delta{x}, \frac{\partial f}{\partial y}\Delta{y}\)</span> ja <span class="math notranslate nohighlight">\(\frac{\partial f}{\partial z}\Delta{z}\)</span>  edustavat funktion arvon muutoksia, jotka vastaavat muuttujien virheitä <span class="math notranslate nohighlight">\(\Delta{x},\Delta{y}\)</span> ja <span class="math notranslate nohighlight">\(\Delta{z}\)</span>.</p>
+<p>Osittaisderivaatat voivat olla etumerkiltään positiivisia tai negatiivisia, samoin muuttujien mittausvirheet voivat mittaustilanteessa tapahtua kumpaan suuntaan tahansa. Huonoimmassa tapauksessa kaikki virheet kasautuvat samaan suuntaan.  Arvio maksimivirheelle saadaan laskemalla ym. tulojen itseisarvot yhteen.</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>Monen muuttujan funktion virhe</strong>      </p>
+<p>Monen muuttujan funktion absoluuttisen virheen yläraja:</p>
+<p><span class="math notranslate nohighlight">\(\Delta{f}\le |\frac{\partial f}{\partial x}\Delta{x}|+|\frac{\partial f}{\partial y}\Delta{y}|+ |\frac{\partial f}{\partial z}\Delta{z}|\)</span></p>
+<p>Summan termit edustavat <strong>osavirheitä</strong>, jotka aiheutuvat muuttujien x,y ja z mittausepävarmuuksista.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Suorakaiteen muotoisen tontin sivuiksi mitattiin a = <span class="math notranslate nohighlight">\((45.3\pm 0.5)m\)</span> ja b = <span class="math notranslate nohighlight">\((30.5\pm 0.4)m\)</span>. Laske tontin ala virherajoineen.</p>
+<p>Vastaus: <span class="math notranslate nohighlight">\((1382\pm 34)m^2\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Tontin ala A = a b = <span class="math notranslate nohighlight">\(45.3\cdot 30.5 m^2\)</span> = <span class="math notranslate nohighlight">\(1381.65 m^2\)</span></p>
+<p>Osavirheet:<br />
+<span class="math notranslate nohighlight">\(\frac{\partial (ab)}{\partial a}\Delta{a} = b\Delta{a}=30.5\cdot 0.5 m^2 = 15.25 m^2 \)</span><br />
+<span class="math notranslate nohighlight">\(\frac{\partial (ab)}{\partial b}\Delta{b} = a\Delta{b}=45.3\cdot 0.4 m^2 = 18.12 m^2 \)</span></p>
+<p>Alan absol.virhe on osavirheiden summa = <span class="math notranslate nohighlight">\(33.37 m^2\)</span></p>
+<p>Vastaus: Ala on <span class="math notranslate nohighlight">\((1382 \pm 34) m^2\)</span></p>
+</div>
+</div>
+<p>Puun korkeuden määrittäminen (liittyy seuraavaan esimerkkiin)<br />
+Puun korkeus voidaan määrittää mittaamalla mittauskohdan etäisyys r puun tyvestä, sekä kulma jossa puun latva näkyy mittauskohdassa maan pinnasta.  Puun korkeus saadaan tällöin kaavalla <span class="math notranslate nohighlight">\(h = r\hspace{1mm}tan(\alpha)\)</span><br />
+<img alt="puu" src="_images/kuva11.PNG" /></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Puun pituusmäärityksessä saatiin mittaustulokset r = <span class="math notranslate nohighlight">\((25.0\pm 0.5)m\)</span> ja <span class="math notranslate nohighlight">\(\alpha=(42.5\pm0.5)^\circ \)</span>. Laske puun korkeus h virherajoineen. </p>
+<p>Vastaus: h = <span class="math notranslate nohighlight">\((22.9\pm 0.9)m\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Puun korkeus <span class="math notranslate nohighlight">\(h = r\hspace{1mm}tan(\alpha) = 25m\cdot tan(42.5^\circ) = 22.91 m\)</span></p>
+<p>Osavirheet liittyen etäisyyden ja kulman mittauksiin:<br />
+<span class="math notranslate nohighlight">\(\frac{\partial (r\cdot tan\alpha)}{\partial r}\Delta{r} = tan(\alpha)\Delta{r}=tan(42.5^\circ)\hspace{1mm}0.5 m = 0.458 m \)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (r\cdot tan\alpha)}{\partial \alpha}\Delta{\alpha} = \frac {r}{cos(\alpha)^2}\Delta{\alpha}=\frac {25}{cos(42.5)^2}\color{red}{(0.5\frac{\pi}{180})} \color{black}= 0.40\hspace{1mm} m\)</span></p>
+<p><span style="color: red;">Huom! Kulmien virhemarginaalit on muunnettava radiaaneiksi, kun lasketaan absoluuttista virhettä. Jos näin tehdä, absoluuttinen virhe tulee paljon todellista arvoa suuremmaksi.</span></p>
+<p>Alan absol.virhe on osavirheiden summa = <span class="math notranslate nohighlight">\(0.86 m\)</span></p>
+<p>Vastaus: Puun korkeus h = <span class="math notranslate nohighlight">\((22.9\pm 0.9)m\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="suhteellisen-virheen-menetelma">
+<h2>Suhteellisen virheen menetelmä<a class="headerlink" href="#suhteellisen-virheen-menetelma" title="Permalink to this headline">¶</a></h2>
+<p>Menetelmä soveltuu vain sellaisille monen muuttujan funktioille, jotka sisältävät muuttujien potensseja, sekä niiden tuloja ja osamääriä , esim.</p>
+<p><span class="math notranslate nohighlight">\(f(x,y,z) = vakio\cdot \frac{x^{n}y^{m}}{z^{k}}\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Suhteellisen virheen menetelmä</p>
+<p>Jos <span class="math notranslate nohighlight">\(f(x,y,z) = vakio\cdot \frac{x^{n}y^{m}}{z^{k}}\)</span>, niin funktion f suhteellinen virhe</p>
+<p><span class="math notranslate nohighlight">\(\frac{\Delta{f}}{f}\le n\frac{\Delta{x}}{x}+m\frac{\Delta{y}}{y}+k\frac{\Delta{z}}{z}\)</span></p>
+<p>Funktion f suhteellinen virhe on siten <strong>potensseilla painotettu summa</strong> muuttujien suhteellisista virheistä.</p>
+</div>
+<p>Kaavan perustelu nojautuu tulon ja osamäärän derivoimissääntöihin, sekä aiemmin esitettyyn absoluuttisen virheen laskutapaan osittaisderivaattojen avulla. Perustelu on pitkähkö ja jätetään se pois tästä esityksestä.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Sylinterin muotoisen säiliön halkaisija d = <span class="math notranslate nohighlight">\((4.50 \pm 0.05) m\)</span> ja korkeus h = <span class="math notranslate nohighlight">\((2.50 \pm 0.04) m\)</span>. Määritä säiliön tilavuus virherajoineen. Käytä suhteellisen virheen menetelmää. Tilavuuden kaava on <span class="math notranslate nohighlight">\(V = \frac{\pi}{4}d^{2}h\)</span></p>
+<p>Vastaus: <span class="math notranslate nohighlight">\((39.8\pm 1.1) m^3\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Tilavuus V = <span class="math notranslate nohighlight">\(\frac{\pi}{4}d^{2}h = \frac{\pi}{4}4.5^{2}2.5 m^3 = 39.76 m^3 \)</span></p>
+<p>Sen suhteellinen virhe <span class="math notranslate nohighlight">\(\frac {\Delta{V}}{V}= 2\frac {\Delta{d}}{d} + \frac {\Delta{h}}{h} \)</span> = <span class="math notranslate nohighlight">\(2\frac {0.05}{4.5} + \frac {0.04}{2.5} = 0.0271 = 2.71\% \)</span></p>
+<p>Tilavuuden absoluuttinen virhe <span class="math notranslate nohighlight">\(\Delta{V}= 2.71\% \cdot 39.76 m^3 = 1.08 m^3\)</span></p>
+<p>Vastaus: V = <span class="math notranslate nohighlight">\((39.8\pm 1.1) m^3\)</span></p>
+</div>
+</div>
+<p>Painovoiman kiihtyvyyden määrittämisestä (liittyy seuraavaan esimerkkiin)<br />
+Painovoiman kiihtyvyys g voidaan määrittää heilurin avulla mittaamalla heilurin langan pituus L ja edestakaiseen heilahdukseen kulunut aika T.<br />
+<img alt="heiluri" src="_images/kuva10.PNG" /></p>
+<p>Putoamiskiihtyvyys saadaan kaavasta  <span class="math notranslate nohighlight">\(g = \frac {4\pi^2 L}{T^2}\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Opiskelijaryhmä sai fysiikan tunnilla heilahdusajaksi <span class="math notranslate nohighlight">\(T = (2.462\pm 0.017) s\)</span> ja langan pituudeksi <span class="math notranslate nohighlight">\(L = (1.50\pm 0.005) m\)</span>. Määritä g virherajoineen.     </p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(g = (9.77\pm 0.17) m/s^2\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>Putoamiskiihtyvyys <span class="math notranslate nohighlight">\(g = \frac {4\pi^2 L}{T^2} = \frac {4\pi^2\cdot 1.50m}{(2.462s)^2} = 9.7696\hspace{1mm} m/s^2 \)</span></p>
+<p>g:n suhteellinen virhe <span class="math notranslate nohighlight">\(\frac {\Delta{g}}{g}= 2\frac {\Delta{T}}{T} + \frac {\Delta{L}}{L} \)</span> = <span class="math notranslate nohighlight">\(2\frac {0.017}{2.462} + \frac {0.005}{1.5} = 0.017 = 1.7\% \)</span></p>
+<p>g:n absoluuttinen virhe <span class="math notranslate nohighlight">\(\Delta{g}= 1.7\% \cdot 9.7696\hspace{1mm}m/s^2 = 0.17\hspace{1mm}m/s^2\)</span></p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(g = (9.77\pm 0.17)\hspace{1mm}m/s^2\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="dkaavat2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Osittaisderivaatat</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="optimointi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Optimointimenetelmiä</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

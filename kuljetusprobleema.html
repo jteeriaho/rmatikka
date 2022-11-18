@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuljetusten optimointi &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Integraalifunktio" href="integraalifunktio.html" />
+    <link rel="prev" title="Newtonin menetelmä" href="newton.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="optimointi.html">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/kuljetusprobleema.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/kuljetusprobleema.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yksinkertainen-2-muuttujan-tapaus">
+   Yksinkertainen 2 muuttujan tapaus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usean-muuttujan-lineaarinen-optimointi">
+   Usean muuttujan lineaarinen optimointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kuljetusprobleema">
+   Kuljetusprobleema
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ongelman-matemaattinen-muotoilu">
+   Ongelman matemaattinen muotoilu
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratkaisu-online-laskimella-http-www-phpsimplex-com-en">
+   Ratkaisu online laskimella  http://www.phpsimplex.com/en/
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Kuljetusten optimointi</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yksinkertainen-2-muuttujan-tapaus">
+   Yksinkertainen 2 muuttujan tapaus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usean-muuttujan-lineaarinen-optimointi">
+   Usean muuttujan lineaarinen optimointi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kuljetusprobleema">
+   Kuljetusprobleema
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ongelman-matemaattinen-muotoilu">
+   Ongelman matemaattinen muotoilu
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratkaisu-online-laskimella-http-www-phpsimplex-com-en">
+   Ratkaisu online laskimella  http://www.phpsimplex.com/en/
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="kuljetusten-optimointi">
+<h1>Kuljetusten optimointi<a class="headerlink" href="#kuljetusten-optimointi" title="Permalink to this headline">¶</a></h1>
+<p>Eräs infrarakentamisessa käytössä oleva optimointimenetelmä liittyy kuljetuksiin. Menetelmä tunnetaan nimellä <strong>lineaarinen optimointi</strong>.</p>
+<p>Sen käyttämän <strong>Simplex -algoritmin</strong> kehitti George Dantzig v. 1946 kehittäessään USA:n ilmavoimille  menetelmiä, joilla suunnitteluprosesseja voitaisiin mekanisoida ja automatisoida.</p>
+<p>Lineaarista optimointia käytetään myös teollisuudessa tuotannon optimoinnissa, sekä kaupan alalla, josta syystä lineaarista optimointia opetetaan myös ekonomiopintojen matematiikassa.</p>
+<div class="section" id="yksinkertainen-2-muuttujan-tapaus">
+<h2>Yksinkertainen 2 muuttujan tapaus<a class="headerlink" href="#yksinkertainen-2-muuttujan-tapaus" title="Permalink to this headline">¶</a></h2>
+<p>Lineaarisen ausekkeen a x + b y , missä vakiot , suurimman tai pienimmän arvon määrittämistä tasoalueessa nimitetään lineaariseksi optimoinniksi. Lauseke voi esittää esim. kahden eri tuotteen myyntivoittoa.
+Näiden tuotteiden valmistusta rajoittavat ehdot, jotka aiheituvat rajallisista työaika-, valmistusmateriaali- ja tuotantokustannusresursseista, voidaan usein havainnollistaa tasoalueena.</p>
+<div class="tip admonition">
+<p class="admonition-title">Esim. Epäyhtälöt <span class="math notranslate nohighlight">\(x + 3 y ≤ 18,  3 x + 2 y ≤ 19, x ≥  0\text{ ja }y ≥  0\)</span> määrittävät nelikulmion   x,y – tasossa. Määritä lausekkeen <span class="math notranslate nohighlight">\(f =  5x +4 y\)</span> suurin arvo nelikulmiossa    </p>
+<p>WolframAlphalla kuva rajoitteiden määräämästä nelikulmiosta syntyy kätevästi komennolla:<br />
+<span class="math notranslate nohighlight">\(\color{red}{\text{plot }\{x + 3 y ≤ 18,  3 x + 2 y ≤ 19, x ≥  0, y ≥  0\}}\)</span>
+<img alt="linop" src="_images/kuva19.PNG" /></p>
+<p>Maksimoitavan funktion f = 5 x + 4 y osittaisderivaattojen muodostamaa vektoria <span class="math notranslate nohighlight">\((\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}) = (5,4) \)</span> kutsutaan funktion  <strong>gradientiksi</strong>.</p>
+<p>Lineaarisen funktion f kuvaaja on tasopinta 3D - avaruudessa. Gradientti kertoo, mihin suuntaan x,y - tasossa funktio f = 5x+4y kasvaa jyrkimmin.</p>
+<p>Kuvaan on piirretty gradientin suuntaisia vektoreita. Kuvan perusteella on ilmeistä, että funktio f saavuttaa suurimman arvonsa pisteessä P, joka on gradientin suunnassa kauimmainen nelikulmion piste.</p>
+<p>Piste P on kahden nelikulmion  rajaviivan x + 3 y = 18 ja 3 x + 2 y = 19 risteyskohdassa. Ratkaisemalla yhtälöpari esim. laskinkomennolla <span class="math notranslate nohighlight">\(\color{red}{\text{solve }x + 3 y = 18,  3 x + 2 y = 19}\)</span>, saadaan P:n koordinaateiksi x = 3 ja  y = 5.</p>
+<p>Funktion f  suurin arvo on siten <span class="math notranslate nohighlight">\(f(3,5) = 5\cdot 3 + 4\cdot 5 = 35\)</span></p>
+</div>
+</div>
+<div class="section" id="usean-muuttujan-lineaarinen-optimointi">
+<h2>Usean muuttujan lineaarinen optimointi<a class="headerlink" href="#usean-muuttujan-lineaarinen-optimointi" title="Permalink to this headline">¶</a></h2>
+<p><img alt="linop" src="_images/kuva20.PNG" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Maksimoitava tai minimoitava ns. <strong>tavoitefunktio</strong> f on lineaarinen muuttujien <span class="math notranslate nohighlight">\(x_1,x_2,....,x_n\)</span> lauseke <span class="math notranslate nohighlight">\(f = a_1 x_1+a_2 x_2+....+a_n x_n\)</span>. Rajoitteet ovat muuttujien välisiä lineaarisia yhtälöitä tai epäyhtälöitä.  </p>
+<ol class="simple">
+<li><p>Edellisen esimerkin monikulmiota vastaa moniulotteisen avaruuden monitahokas.</p></li>
+<li><p>Tavoitefunktion f gradientti <span class="math notranslate nohighlight">\((\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},....) = (a_1,a_2,...,a_n) \)</span> muodostuu muuttujien kertoimista.</p></li>
+<li><p>Tavoitefunktion f maksimi löytyy monitahokaan gradientin suunnassa kauimmaisesta kärkipisteestä. Minimi löytyy gradientille vastakkaisessa suunnassa olevasta kauimmaisesta kärkipisteestä.</p></li>
+<li><p>Simplex - algoritmissa valitaan lähtökohdaksi jokin kärkipiste. Algoritmissa edetään piste pisteeltä kohti tavoitetta gradientin suuntaisesti.</p></li>
+<li><p>Käsin laskettuna algoritmi on hidas toteuttaa, mutta tietokoneelle koodattuna tehokas. Simplex algoritmi on mukana lukuisissa tietokoneohjelmissa, mm. Excel taulukkolaskentaohjelmassa.  Netistä löytyy lineaariseen ohjelmointiin ilmaisia online  -laskimia, joita käytämme tämän osuuden tehtävän ratkaisemiseen.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="kuljetusprobleema">
+<h2>Kuljetusprobleema<a class="headerlink" href="#kuljetusprobleema" title="Permalink to this headline">¶</a></h2>
+<p>Kuljetusten optimoinnissa tavoite on säästää kuljetuskustannuksia vähentämällä ajokilometrit minimiin. Minimoitava funktio on lineaarinen, muuttujina ovat kuljetettavat määrät ja kertoimina kilometrimäärät.</p>
+<div class="tip admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Kuljetusyritys toimittaa soraa tierakennuskohteisiin. Sillä on kolme soravarastoa  V1, V2 ja V3 joissa on soraa 1500 <span class="math notranslate nohighlight">\(m^3\)</span>, 3000 <span class="math notranslate nohighlight">\(m^3\)</span> ja 2000 <span class="math notranslate nohighlight">\(m^3\)</span>.   Toimituskohteita on myös kolme:   K1, K2 ja K3, joihin toimitettavat määrät ovat 1200 <span class="math notranslate nohighlight">\(m^3\)</span>, 1900 <span class="math notranslate nohighlight">\(m^3\)</span> ja 2100 <span class="math notranslate nohighlight">\(m^3\)</span>.   Alla olevassa taulukossa on ruutuihin kirjoitettu etäisyydet soravarastojen ja kohteiden välillä.    Määritä kustakin soravarastosta kuhunkin kohteeseen toimitettavat määrät siten, että kuljetusten kokonaiskilometrimäärä on mahdollisimman pieni.
+<img alt="sora" src="_images/kuva21.PNG" /></p>
+</div>
+</div>
+<div class="section" id="ongelman-matemaattinen-muotoilu">
+<h2>Ongelman matemaattinen muotoilu<a class="headerlink" href="#ongelman-matemaattinen-muotoilu" title="Permalink to this headline">¶</a></h2>
+<p>Merkitään varastoista kohteisiin kuljetettavia kuutiomääriä muuttujilla x1,x2,…,x9 ao. taulukon mukaisesti:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>V1</p></th>
+<th class="head"><p>V2</p></th>
+<th class="head"><p>V3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>K1</p></td>
+<td><p>x1</p></td>
+<td><p>x2</p></td>
+<td><p>x3</p></td>
+</tr>
+<tr class="row-odd"><td><p>K2</p></td>
+<td><p>x4</p></td>
+<td><p>x5</p></td>
+<td><p>x6</p></td>
+</tr>
+<tr class="row-even"><td><p>K3</p></td>
+<td><p>x7</p></td>
+<td><p>x8</p></td>
+<td><p>x9</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ongelma voidaan esittää matemaattisessa muodossa seuraavasti.</p>
+<p><strong>Minimoi</strong> 32x1 +54x2 +17x3 +26x4 +41x5 +19x6 +38x7 +17x8 +24x9<br />
+<strong>ehdoilla</strong><br />
+x1 + x2 + x3 = 1200<br />
+x4 + x5 + x6 = 1900<br />
+x7 + x8 + x9 = 2100<br />
+x1 + x4 + x7 ≤ 1500<br />
+x2 + x5 + x8 ≤ 3000<br />
+x3 + x6 + x9 ≤ 2000<br />
+x1,x2,x3,x4,x5,x6,x7,x8,x9 ≥ 0</p>
+<p>Osa ehdoista on yhtälöitä johtuen siitä että kohteisiin tarvitaan täsmälleen oikea määrä soraa.<br />
+Toiset ehdot ovat epäyhtälöitä, joiden rajoitteina on varastojen sisältämät maksimimäärät.</p>
+</div>
+<div class="section" id="ratkaisu-online-laskimella-http-www-phpsimplex-com-en">
+<h2>Ratkaisu online laskimella  <a class="reference external" href="http://www.phpsimplex.com/en/">http://www.phpsimplex.com/en/</a><a class="headerlink" href="#ratkaisu-online-laskimella-http-www-phpsimplex-com-en" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Siirryttyäsi linkin sivulle, käynnistä 1. rivillä olevasta linkistä <strong>PHPSimplex</strong> laskimeen</p></li>
+<li><p>Aloitussivulla kysytään muuttujien <span class="math notranslate nohighlight">\(x_i\)</span> määrää ja rajoitteiden määrää.  Rajoitteiden määrään lasketaan varastohin liittyvät 3 epäyhtälöä ja kohteisiin liityvät 3 yhtälöä.</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\color{blue}{\text{    How many decision variables are the problem? }}   \color{red}9\)</span><br />
+<span class="math notranslate nohighlight">\(\color{blue}{\text{    How many constraints? }}   \color{red}6\)</span></p>
+<ol class="simple">
+<li><p>Paina Continue - painiketta. Avautuvassa lomakkeessa kysytään aluksi, haetaanko funktiolle maksimia vai minimiä. Oletusarvona on maksimi, mikä kuljetusprobleemassa pitää muistaa vaihtaa.</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\color{blue}{\text{   What is the objective of the function? }}   \color{red}{minimize}\)</span></p>
+<ol class="simple">
+<li><p>Täytä kohtaan <strong>Function:</strong> tavoitefunktion kertoimet 32, 54, 17, 26, ….</p></li>
+<li><p>Täytä kohtaan <strong>Constraints:</strong> kutakin ehtoa vastaavat kertoimet, yhtäsuuruus tai erisuuruusmerkki, sekä rajoitteen oikean puolen arvo.</p></li>
+</ol>
+<p>Esim. ensimmäinen rajoite on yhtälö x1 + x2 + x3 = 1200.<br />
+Kirjoita lomakkeeseen muuttujien x1, x2 ja x3 kertoimiksi luku 1,  muuta ≤ -merkki = - merkiksi, kirjoita rivin loppuun 1200.  Muiden muuttujien kertoimet ovat nollia, ne voi jättää tyhjäksi.</p>
+<p>Täytetty lomake näyttää seuraavalta:<br />
+<img alt="simp" src="_images/kuva22.PNG" /></p>
+<ol class="simple">
+<li><p>Paina <strong>Continue</strong> painiketta</p></li>
+<li><p>Valitse <strong>Direct Solution</strong>  ja saat ratkaisun, jonka ylärivillä on tavoitefunktion maksimiarvo, ja alemmilla riveillä optimia vastaavat muuttujien arvot  (kuljetusmäärät kustakin varastosta kuhunkin kohteeseen)</p></li>
+</ol>
+<p>The optimal solution value is Z = 99900<br />
+X1 = 0<br />
+X2 = 0<br />
+X3 = 1200<br />
+X4 = 1100<br />
+X5 = 0<br />
+X6 = 800<br />
+X7 = 0<br />
+X8 = 2100<br />
+X9 = 0</p>
+<p>Optimiratkaisua vastaavat kuljetusmäärät taulukkoon täydennettyinä<br />
+<img alt="optimi" src="_images/kuva25.PNG" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="newton.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Newtonin menetelmä</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="integraalifunktio.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Integraalifunktio</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

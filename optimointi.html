@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimointimenetelmiä &#8212; Rakennusalan matemaattiset menetelmät 5 op</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Newtonin menetelmä" href="newton.html" />
+    <link rel="prev" title="Virheenarviointia derivaatoilla" href="virhearvio.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rakennusalan matemaattiset menetelmät 5 op</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sisällysluettelo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Elinkaarilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimalli.html">
+   Elinkaarimalli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="koronkorko.html">
+   Talousmatematiikan perusteita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elinkaarimenetelmat.html">
+   Elinkaarilaskennan menetelmiä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tilasto-oppia
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1a.html">
+   Tilastolliset tunnusluvut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto1b.html">
+   Todennäköisyysjakaumat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2a.html">
+   Tilastollinen virheenarviointi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tilasto2b.html">
+   Regressioanalyysi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivaatan määritelmä
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="rajaarvo.html">
+   Raja-arvot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivaatta.html">
+   Derivaatta
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Derivoimistekniikkaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat1.html">
+   Derivoimiskaavoja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dkaavat2.html">
+   Osittaisderivaatat
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sovelluksia
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="virhearvio.html">
+   Virheenarviointia derivaatoilla
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Optimointimenetelmiä
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newton.html">
+   Newtonin menetelmä
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lineaarinen optimointi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="kuljetusprobleema.html">
+   Kuljetusten optimointi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Integraalilaskentaa
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="integraalifunktio.html">
+   Integraalifunktio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="maarattyintegraali.html">
+   Määrätty integraali
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intsovelluksia.html">
+   Integraalin sovelluksia
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/optimointi.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/optimointi.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-funktion-aariarvo">
+   Yhden muuttujan funktion ääriarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usean-muuttujan-funktion-aariarvo">
+   Usean muuttujan funktion ääriarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ehdolliset-aariarvot-constraint-minima-maxima">
+   Ehdolliset ääriarvot (constraint minima/maxima)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Optimointimenetelmiä</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yhden-muuttujan-funktion-aariarvo">
+   Yhden muuttujan funktion ääriarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usean-muuttujan-funktion-aariarvo">
+   Usean muuttujan funktion ääriarvo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ehdolliset-aariarvot-constraint-minima-maxima">
+   Ehdolliset ääriarvot (constraint minima/maxima)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="optimointimenetelmia">
+<h1>Optimointimenetelmiä<a class="headerlink" href="#optimointimenetelmia" title="Permalink to this headline">¶</a></h1>
+<p>Ääriarvotehtävissä tavoite on löytää <strong>funktion suurin tai pienin arvo</strong>.</p>
+<p>Käytännön sovelluksina ovat erilaiset <strong>optimointiprobleemat</strong>, joissa halutaan esim. maksimoida tuottoa tai minimoida materiaalin käyttöä ym. kuluja.</p>
+<p>Funktiossa, jonka suurinta tai pienintä arvoa etsitään, voi olla <strong>yksi tai useampi muuttuja</strong></p>
+<p><img alt="aariarvo" src="_images/kuva12.PNG" /></p>
+<div class="section" id="yhden-muuttujan-funktion-aariarvo">
+<h2>Yhden muuttujan funktion ääriarvo<a class="headerlink" href="#yhden-muuttujan-funktion-aariarvo" title="Permalink to this headline">¶</a></h2>
+<p>Funktiolla voi olla kahdenlaisia ääriarvoja.  <strong>Globaali maksimi tai globaali minimi</strong> tarkoittaa funktion suurinta tai pienintä arvoa koko määritysjoukossa.<br />
+<strong>Lokaali maksimi tai globaali minimi</strong> ovat paikallisia ääriarvoja, jotka ovat funktion suurimpia ja pienimpiä arvoja jossakin suppeammassa ympäristössä.</p>
+<p>Jatkuvalla yhden muuttujan funktiolla voi olla globaaleja ääriarvoja derivaatan nollakohtien lisäksi määrittelyvälin päätepisteissä ja sellaisissa kohdissa, missä derivaatta ei ole jatkuva (esim. käyrällä olevat kärjet).<br />
+<img alt="aari" src="_images/kuva24.PNG" /></p>
+<p>Seuraavissa esimerkeissä etsitään globaaleja ääriarvoja derivaatan nollakohdista.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Esim. Lentävän ammuksen lentoradan korkeuskoordinaatti y riippuu ajasta t kaavan <span class="math notranslate nohighlight">\(y = 40 +320 t-4.9 t^2 \)</span> mukaisesti. Määritä lentoradan korkein kohta.       </p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(y_{max}= 5264\)</span> m</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Ratkaisu</p>
+<p>y-koordinaatin lauseke on 2. asteen polynomifunktio, jossa <span class="math notranslate nohighlight">\(t^2\)</span>:n kerroin on negatiivinen. Lausekkeen kuvaaja on alaspäin aukeava paraabeli, jonka huippukohdassa derivaatta on nolla.  Lasketaan huipun koordinaatit.</p>
+<p>Huipun t:   D (<span class="math notranslate nohighlight">\(40 +320 t-4.9 t^2\)</span>) = 320 - 9.8 t = 0 =&gt;  t = 320/9.8 = 32.65 s<br />
+Huipun y:   <span class="math notranslate nohighlight">\(y_{max} = 40 + 320\cdot 32.65 - 4.9\cdot {32.65}^2 = 5264.4 \)</span></p>
+<p>Vastaus: Radan korkein kohta on 5264 m . Se saavutetaan ajanhetkellä 32.65 s.</p>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Esim. Suunnistaja siirtyy metsässä olevalta rastilta A suolla olevalle rastille B (ks. kuva alempana). Juoksunopeus metsässä on 3.0 m/s ja suolla 1.5 m/s. Määritä kohta X siten, että juoksuaika A:sta B:hen on minimissään.       </p>
+<p><img alt="suunnistus" src="_images/kuva14.PNG" /><br />
+Vastaus: <span class="math notranslate nohighlight">\(x = 718 m\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa1: derivaatan nollakohdan etsiminen</p>
+<p>Välillä AB kuluva aika t on metsässä ja suolla kuluvien aikojen summa:</p>
+<p><span class="math notranslate nohighlight">\(t=\frac{\sqrt{200^2+x^2}}{3.0}+\frac{\sqrt{150^2+(800-x)^2}}{1.5}\)</span>   (aika=matka/nopeus)</p>
+<p>Ratkaisu WoframAlphalla:</p>
+<p>Derivaatan nollakohta: <span class="math notranslate nohighlight">\(\color{red}{\text{solve D}(\frac{\sqrt{200^2+x^2}}{3.0}+\frac{\sqrt{150^2+(800-x)^2}}{1.5}=0,x)}\)</span>  antaa tulokseksi  <span class="math notranslate nohighlight">\(t\approx 717.562\)</span>.</p>
+<p>Sen, että kyseessä on minimikohta, voi varmistaa piirtämällä t(x):n lausekkeen esim. välillä [500,800]:<br />
+<span class="math notranslate nohighlight">\(\color{brown}{\text{plot }\frac{\sqrt{200^2+x^2}}{3.0}+\frac{\sqrt{150^2+(800-x)^2}}{1.5}\text{from 600 to 800}}\)</span><br />
+<img alt="min" src="_images/kuva15.PNG" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2: laskimen <em>minimize</em> toiminto</p>
+<p>Komento <span class="math notranslate nohighlight">\(\color{brown}{\text{minimize }\frac{\sqrt{200^2+x^2}}{3.0}+\frac{\sqrt{150^2+(800-x)^2}}{1.5}}\)</span><br />
+antaa tulokseksi <span class="math notranslate nohighlight">\(\text{min}\{\frac{\sqrt{200^2+x^2}}{3.0}+\frac{\sqrt{150^2+(800-x)^2}}{1.5}\}\approx 362.4\text{ at }x\approx 717.562\)</span></p>
+</div>
+</div>
+<p><strong>Ääriarvot algebralaskimissa</strong></p>
+<p>Algebralaskimissa on ääriarvojen etsimiseen valmiit funktiot (esim. TI-CAS laskimissa FindMaximum, FindMinimum).</p>
+<p>WolframAlpha - online laskimessa vastaavat komennot ovat <strong>maximize</strong> ja <strong>minimize</strong>.  Edellinen esimerkki olisi voitu ratkaista W.A:ssa yhdellä komennolla:</p>
+<p><span style="color:red">maximize 40 +320 t-4.9 t^2</span>  , joka antaa ratkaisun muodossa<br />
+<span style="color:green">max{40+320 t - 4.9 t^2} <span class="math notranslate nohighlight">\(\approx \)</span> 5264.5 at t<span class="math notranslate nohighlight">\(\approx\)</span> 32.653</span></p>
+</div>
+<div class="section" id="usean-muuttujan-funktion-aariarvo">
+<h2>Usean muuttujan funktion ääriarvo<a class="headerlink" href="#usean-muuttujan-funktion-aariarvo" title="Permalink to this headline">¶</a></h2>
+<p>Kahden muuttujan funktion z = f(x,y) kuvaaja on 3D -avaruuden pinta. Mikäli funktiolla on suurin tai pienin arvo, ne näkyvät pinnassa huippuina tai kuoppina.</p>
+<p>Ääriarvokohdassa usein molemmat osittaisderivaatat saavat arvon nolla (tangentit x- ja y-suunnissa ovat vaakasuoria)</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Etsi piste P=(x,y), jonka kolmesta kiinteästä pisteestä A(3,8), B(14,2) ja C(1,5) laskettujen etäisyyksien summa on mahdollisimman pieni.</p>
+<p>Vastaus: <span class="math notranslate nohighlight">\(P = (3.17, 6.63)\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa1. Yhtälöpari, joka ratkaistaan W.A:lla tai algebralaskimella</p>
+<p><span class="math notranslate nohighlight">\(\color{brown}{\text{solve D}(\sqrt{(x-3)^2+(y-8)^2}+\sqrt{(x-14)^2+(y-2)^2}+}\)</span><br />
+<span class="math notranslate nohighlight">\(\color{brown}{\sqrt{(x-1)^2+(y-5)^2},x)=0,D(\sqrt{(x-3)^2+(y-8)^2}+}\)</span><br />
+<span class="math notranslate nohighlight">\(\color{brown}{\sqrt{(x-14)^2+(y-2)^2}+\sqrt{(x-1)^2+(y-5)^2},y)=0}\)</span><br />
+antaa tuloksen <span class="math notranslate nohighlight">\(x\approx 3.17, y\approx 6.63\)</span></p>
+<p>Komento on varsin pitkä ja voi olla, ettei mahdu W.A:n syöttösoluun</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2. W.A:n mimimize komennon käyttö</p>
+<p><span class="math notranslate nohighlight">\(\color{brown}{\text{minimize }\sqrt{(x-3)^2+(y-8)^2}+\sqrt{(x-14)^2+(y-2)^2}+}\)</span><br />
+<span class="math notranslate nohighlight">\(\color{brown}{\sqrt{(x-1)^2+(y-5)^2}}\hspace{5mm}\)</span> antaa tuloksen <span class="math notranslate nohighlight">\(x\approx 3.17, y\approx 6.63\)</span></p>
+<p>Komento on lyhyempi ja mahtuu syöttösoluun</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa3. W.A:n grafiikkakomento ContourPlot</p>
+<p><span class="math notranslate nohighlight">\(\color{brown}{\text{contourplot }\sqrt{(x-3)^2+(y-8)^2}+\sqrt{(x-14)^2+(y-2)^2}+}\)</span><br />
+<span class="math notranslate nohighlight">\(\color{brown}{\sqrt{(x-1)^2+(y-5)^2}}\)</span></p>
+<p>antaa korkeuskäyräkuvan pinnasta. Minimi löytyy tummasävyisimmästä kohdasta.<br />
+<img alt="cont" src="_images/kuva13.PNG" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="ehdolliset-aariarvot-constraint-minima-maxima">
+<h2>Ehdolliset ääriarvot (constraint minima/maxima)<a class="headerlink" href="#ehdolliset-aariarvot-constraint-minima-maxima" title="Permalink to this headline">¶</a></h2>
+<p>Monissa sovelluksissa optimoitava funktio sisältää useita muuttujia, joita kuitenkin sitovat toisiinsa rajoittavat ehdot. Ehtoja hyödyntäen muuttujia voidaan eliminoida siten, että loppujen lopuksi kyse on yhden muuttujan funktion ääriarvotehtävästä.</p>
+<p>Tämän tyyppisistä tilanteista käytetään englanninkielisie termejä <strong>constraint maximum</strong> ja <strong>constraint minimum</strong>. Sana <em>constraint</em> käännetään suomeksi <em>rajoite</em></p>
+<div class="tip admonition">
+<p class="admonition-title">Esimerkki</p>
+<p>Määritä sellaisen suorakulmion suurin mahdollinen pinta-ala, jonka piirin pituus on 500.<br />
+<img alt="suorak" src="_images/kuva16.PNG" /><br />
+Merkitään suorakulmion sivuja x:llä ja y:llä. Ongelma voidaan muotoilla matemaattisesti seuraavalla tavalla:</p>
+<p><strong>Maksimoi x y ehdolla 2x + 2y = 500</strong></p>
+<p>Ratkaisumenetelmiä:</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa1: muuntaminen yhden muuttujan funktion ääriarvotehtäväksi:  </p>
+<ol class="simple">
+<li><p>Ratkaistaan y ehdosta 2x+2y=500 muuttujan x funktiona:   y = 250 - x</p></li>
+<li><p>Muunnetaan maksimoitava lauseke yhden muuttujan funktioksi kohdasta 1) saadulla sijoituksella ja sievennetään:<br />
+Ala <span class="math notranslate nohighlight">\(A = x y = x (250 - x) = 250 x - x^2\)</span></p></li>
+<li><p>Etsitään derivaatan nollakohta: <span class="math notranslate nohighlight">\(D(250 x - x^2)\)</span> = 250 - 2x = 0 =&gt; x = 125</p></li>
+<li><p>Lasketaan toisen sivun pituus y = 250 - x = 250 - 125 = 125</p></li>
+<li><p>Kohdassa 2) saadun funktion <span class="math notranslate nohighlight">\(250 x-x^2\)</span> kuvaaja on alaspäin aukeava paraabeli, jolla tunnetusti on derivaatan nollakohdassa maksimi.  (kuvaa ei tarvita)</p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2: WolframAlphan ehdollisen ääriarvon ratkaisutoiminto:  </p>
+<p>WolframAlhassa <strong>Maksimoi x y ehdolla 2x + 2y = 500</strong> voidaan ratkaista suoraan komennolla, joka on melkein suora käännös em. lauseesta:<br />
+<span class="math notranslate nohighlight">\(\color{red}{\text{maximize x*y on 2x+2y=500}}\)</span></p>
+<p>Vastaus tulee muodossa <span class="math notranslate nohighlight">\(\color{blue}{\text{max{x y|2 x + 2 y = 500} = 15625 at (x, y) = (125, 125)}}\)</span><br />
+Siitä löytyy paitsi suorakaiteen sivujen mitat x=y=125, myös suurin pinta-ala, joka on 15625.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa3: Lagrangen menetelmä (Sopii laajan matematiikan kurssilla esitettäväksi)  </p>
+<p>Ranskalainen 1700-luvun matemaatikko Lagrange kehitti seuraavanlaisen menetelmän ehdollisten ääriarvojen ratkaisuun:<br />
+Jos f(x,y) on optimoitava funktio, jossa muuttujia sitoo ehto g(x,y) = c  (c = vakio), muodostetaan näistä lisäparametrin <span class="math notranslate nohighlight">\(\lambda\)</span> sisältävä ns.</p>
+<p>Lagrangen funktio <span class="math notranslate nohighlight">\(L = f(x,y)- \lambda \cdot (g(x,y)-c)\)</span></p>
+<p>Ääriarvo löytyy kohdasta, jossa Lagrangen funktion osittaisderivaatat <span class="math notranslate nohighlight">\(\frac{\partial L}{\partial x},\frac{\partial L}{\partial y}\text{ ja }\frac{\partial L}{\partial \lambda}\)</span> ovat nollia.</p>
+<p>Esimerkissämme Lagrangen funktio on <span class="math notranslate nohighlight">\(L = x\cdot y-\lambda \cdot (2x+2y-500)\)</span></p>
+<p>Osittaisderivaatat ovat <span class="math notranslate nohighlight">\(\frac{\partial L}{\partial x}=y-2\lambda\text{,  }\frac{\partial L}{\partial y}=x-2\lambda\text{  ja    }\frac{\partial L}{\partial \lambda}=2x+2y-500\)</span>.  Merkitään ne kaikki nolliksi ja ratkaistaan yhtälöryhmä komennolla</p>
+<p><span class="math notranslate nohighlight">\(\color{red}{\text{solve }y-2\lambda =0, x-2\lambda =0 , 2x+2y-500=0}\)</span>.<br />
+Ratkaisu on x = 125, y = 125 ja <span class="math notranslate nohighlight">\(\lambda = 62.5\)</span></p>
+<p>Vastaus on siis sama kuin aiemmilla menetelmillä:  x = y = 125.</p>
+</div>
+</div>
+<p>Seuraavassa esimerkissä tarvitaan sylinteriin liittyviä kaavoja:
+<img alt="syl" src="_images/kuva17.PNG" /></p>
+<div class="tip admonition">
+<p class="admonition-title">Tynnyrin materiaalin kulutuksen minimin etsiminen</p>
+<p>Määritä sellaisen 100 litran tynnyrin mitat (pohjan säde r ja korkeus h), jonka pinta-ala on mahdollisimman pieni.<br />
+Pinta-alaan kuuluu pohja ja kansi, ja vaippa. Niiden yhteispinta-ala <span class="math notranslate nohighlight">\(A = 2\pi r^2 + 2\pi r h\)</span><br />
+Niitä rajoittaa ehto, jonka mukaan tilavuus <span class="math notranslate nohighlight">\(V = \pi r^2 h = 100 {dm}^3\)</span>.</p>
+<p>Ongelman matemaattinen muotoilu on seuraava:</p>
+<p><strong>Minimoi <span class="math notranslate nohighlight">\(2\pi r^2 + 2\pi r h\)</span>  ehdolla <span class="math notranslate nohighlight">\(\pi r^2 h = 100\)</span></strong></p>
+<p>Ratkaisumenetelmiä:</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa1: muuntaminen yhden muuttujan funktion ääriarvotehtäväksi:  </p>
+<ol class="simple">
+<li><p>Ratkaistaan tilavuusehdosta h muuttujan r funktiona:   <span class="math notranslate nohighlight">\(h = \frac {100}{\pi r^2}\)</span></p></li>
+<li><p>Muunnetaan maksimoitava lauseke yhden muuttujan funktioksi kohdasta 1) saadulla sijoituksella ja sievennetään:<br />
+Ala <span class="math notranslate nohighlight">\(A = 2\pi r^2 + 2\pi r h = 2\pi r^2 +  \frac {100\cdot 2\pi r}{\pi r^2}=2\pi r^2 +  \frac {200}{r}\)</span></p></li>
+<li><p>Etsitään derivaatan nollakohta: <span class="math notranslate nohighlight">\(D(2\pi r^2 +  \frac {200}{r}) = 4\pi r-\frac {200}{r^2}=0 =&gt; r = 2.52\)</span></p></li>
+<li><p>Lasketaan korkeus <span class="math notranslate nohighlight">\(h = \frac {100}{\pi r^2}= \frac {100}{\pi 2.52^2}= 5.01\)</span></p></li>
+<li><p>Varmistutaan vielä, että kyseessä on minimi piirtämällä kuva A:n lausekkeesta välillä [2,3].
+<span class="math notranslate nohighlight">\(\color{red}{\text{plot }2\pi r^2 +  \frac {200}{r}\text{ from 2 to 3}}\)</span><br />
+<img alt="min2" src="_images/kuva18.PNG" /></p></li>
+</ol>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Tapa2: WolframAlphan ehdollisen ääriarvon ratkaisutoiminto:  </p>
+<p>WolframAlhassa ratkaisu tulee helposti yhdellä komennolla<br />
+<span class="math notranslate nohighlight">\(\color{red}{\text{minimize } 2\pi r^2 + 2\pi r h\text{ on }\pi r^2 h=100}\)</span></p>
+<p>Vastaus tulee muodossa <span class="math notranslate nohighlight">\(\color{blue}{\text{min{2 π r^2 + 2 π r h|π h r^2 = 100}≈119.265 at (h, r)≈(5.0308, 2.5154)}}\)</span><br />
+Siitä löytyy r, h sekä tynnyrin pinta-ala minimikohdassa, joka on <span class="math notranslate nohighlight">\(119 dm^2\)</span></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="virhearvio.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Virheenarviointia derivaatoilla</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="newton.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Newtonin menetelmä</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jouko Teeriaho, Luma-Tiimi, LapinAMK<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
